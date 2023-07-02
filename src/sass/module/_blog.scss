@@ -1,0 +1,63 @@
+@use "global" as *;
+
+.blog {
+    text-align: center;
+    background-image: none;
+    
+    @include mq("md") {
+        display: block;
+        width: 100%;
+        background-image: url("../images/common/blog-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 60%;
+        background-position: top;
+    }
+}
+
+.blog__inner {
+    position: relative;
+}
+
+.blog__illust-top {
+    display: none;
+    @include mq("md") {
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        max-width: rem(437);
+        top: rem(-76);
+        right: clamp(rem(400), 56.583333vw, rem(747));
+    }
+}
+
+.blog__illust-top img {
+    aspect-ratio: 437 / 201;
+    object-fit: cover;
+}
+
+.blog__cards {
+    margin-top: rem(27);
+    row-gap: rem(40);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    @include mq("md") {
+        margin-top: rem(78);
+        grid-template-columns: repeat(3,1fr);
+        column-gap: rem(40);
+    }
+}
+
+.blog__card {
+    width: 100%;
+    max-width: rem(333);
+    display: block;
+    background-color: $white;
+}
+
+.blog__button {
+    margin-top: rem(39);
+    @include mq("md") {
+        margin-top: rem(81);
+}
+}

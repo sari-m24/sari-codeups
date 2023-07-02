@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.price-list__title {
+    font-size: rem(16);
+    line-height: 1.5;
+    padding-bottom: rem(1);
+    color: $green;
+    border-bottom: 1px solid $accent-green;
+    font-weight: $bold;
+    @include mq("md") {
+        padding-bottom: rem(4);
+    }
+}
+
+.price-list__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: rem(11);
+    @include mq("md") {
+        margin-top: rem(8);
+    }
+}
+
+.price-list__content,
+.price-list__price {
+    font-size: rem(14);
+    line-height: 1.5;
+    font-weight: $normal;
+    color: $green;
+    @include mq("md") {
+        font-size: rem(16);
+    }
+}
+
+.price-list__price {
+    font-family: "Noto Sans JP", sans-serif;
+}

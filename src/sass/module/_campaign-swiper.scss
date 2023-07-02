@@ -1,0 +1,75 @@
+@use "global" as *;
+
+
+.campaign-swiper {
+  margin-top: rem(24);
+  overflow: visible;
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+
+.campaign-swiper__button {
+  display: none;
+  @include mq("md") {
+      position: absolute;
+      display: flex;
+      width: rem(270);
+      text-rendering: initial;
+      right: rem(-15);
+      top: rem(-90);
+  }
+}
+
+.campaign-swiper__button-prev,
+.campaign-swiper__button-next {
+  text-rendering: initial;
+  color: transparent;
+  width: rem(90);
+  height: rem(90);
+}
+
+.campaign-swiper__button-prev::after {
+  content: "";
+  width: rem(80);
+  height: rem(80);
+  background-image: url("../images/common/left.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.campaign-swiper__button-next::after {
+  content: "";
+  width: rem(80);
+  height: rem(80);
+  background-image: url("../images/common/right.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.campaign-swiper__wrapper {
+  transition-timing-function: linear;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+.campaign-swiper__card {
+  width: 100%;
+  max-width: rem(280);
+  transition: opacity 0.5s;
+  @include mq("md") {
+    max-width: rem(333);
+  }
+}
+
+.campaign-swiper__card:hover{
+  opacity: 0.7;
+}
