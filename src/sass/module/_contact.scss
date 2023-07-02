@@ -129,7 +129,9 @@
 
 .contact__section-title {
     margin-top: rem(20);
-    margin-left: rem(5);
+    @include mq("md") {
+        margin-left: rem(5);
+    }
 }
 .contact__section-title-main {
     font-size: rem(80);

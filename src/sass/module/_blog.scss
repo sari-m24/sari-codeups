@@ -9,7 +9,7 @@
         width: 100%;
         background-image: url("../images/common/blog-bg.jpg");
         background-repeat: no-repeat;
-        background-size: 100% 60%;
+        background-size: 100% 60.4%;
         background-position: top;
     }
 }
@@ -58,6 +58,6 @@
 .blog__button {
     margin-top: rem(39);
     @include mq("md") {
-        margin-top: rem(81);
+        margin-top: rem(82);
 }
 }

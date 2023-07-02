@@ -38,8 +38,8 @@
     border-bottom: 1px solid $accent-green;
     font-weight: $medium;
     @include mq("md") {
-        margin-top: rem(6);
-        padding-bottom: rem(8);
+        margin-top: rem(7);
+        padding-bottom: rem(3);
     }
 }
 
@@ -51,7 +51,7 @@
     font-weight: $normal;
     color: $green;
     @include mq("md") {
-        margin-top: rem(16);
+        margin-top: rem(21);
         font-size: rem(16);
     }
 }
@@ -86,8 +86,12 @@
     background-color: #C94800;
     width: 102%;
     height: rem(3);
-    top:33%;
+    top:43%;
     left: 0;
+
+    @include mq("md") {
+        top:43%
+    }
 }
 
 

@@ -5,7 +5,7 @@
   margin-top: rem(24);
   overflow: visible;
   @include mq("md") {
-    margin-top: rem(40);
+    margin-top: rem(39);
   }
 }
 
@@ -50,7 +50,7 @@
   background-size: contain;
 }
 
-.campaign-swiper__wrapper {
+.campaign-swiper__cards {
   transition-timing-function: linear;
   position: relative;
   width: 100%;
