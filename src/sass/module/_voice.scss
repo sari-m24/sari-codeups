@@ -32,7 +32,7 @@
     justify-items: center;
     align-items: center;
     @include mq("md") {
-        margin-top: rem(29);
+        margin-top: rem(28);
         grid-template-columns: repeat(2,1fr);
         column-gap: rem(40);
     }

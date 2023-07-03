@@ -7,7 +7,7 @@
     text-align: left;
     transition: opacity 0.3s;
     @include mq("md") {
-        padding: rem(24);
+        padding: rem(24) rem(24) rem(21) rem(24);
     }
 }
 
@@ -63,6 +63,6 @@
 .voice-card__text {
     margin-top: rem(18);
     @include mq("md") {
-        margin-top: rem(40);
+        margin-top: rem(43);
 }
 }
