@@ -42,6 +42,10 @@
     color: $green;
     border-bottom: 1px solid $accent-green;
     font-weight: $medium;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
     @include mq("md") {
         padding-bottom: rem(2);
     }
@@ -49,5 +53,9 @@
 
 .blog-card__text {
     margin-top: rem(19);
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
 }
 

@@ -18,6 +18,12 @@
 .voice-card__wrapper {
     display: flex;
     align-items: end;
+    justify-content: space-between;
+}
+
+.voice-card__top {
+    width: 100%;
+    max-width: rem(276);
 }
 
 .voice-card__label {
@@ -43,9 +49,14 @@
     color: $green;
     border-bottom: 1px solid $accent-green;
     font-weight: $medium;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
     @include mq("md") {
         font-size: rem(24);
         margin-top: rem(8);
+        -webkit-line-clamp: 2;
     }
 }
 
@@ -62,6 +73,10 @@
 
 .voice-card__text {
     margin-top: rem(18);
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
     @include mq("md") {
         margin-top: rem(43);
 }

@@ -117,14 +117,16 @@
 }
 
 .contact__button-wrapper::before {
-    position: absolute;
-	top: 0;
-	right: 100%;
-	margin: 0 rem(77);
-	content: "";
-	width: 1px;
-	height: 100%;
-	background-color: $accent-green;
+    @include mq("md") {
+        position: absolute;
+        top: 0;
+        right: 100%;
+        margin: 0 rem(77);
+        content: "";
+        width: 1px;
+        height: 100%;
+        background-color: $accent-green;
+    }
 }
 
 .contact__section-title {

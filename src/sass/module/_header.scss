@@ -21,15 +21,20 @@
     justify-content: space-between;
     width: 100%;
     height: inherit;
-    padding: rem(21) rem(15);
+    padding-left: rem(15);
+    padding-right: rem(15);
 
     @include mq("md") {
-        padding: rem(26) rem(21);
+        padding-left: rem(21);
+        padding-right: rem(21);
     }
 }
 
 .header__name {
     z-index: 6000;
+    height: inherit;
+    display: flex;
+    align-items: center;
     @include mq("md") {
         padding-left: rem(20);
         padding-right: rem(20);
@@ -39,6 +44,7 @@
 .header__logo {
     display: flex;
     width: rem(102);
+    height: inherit;
     transition: opacity 0.3s;
 
     @include mq("lg") {
@@ -52,6 +58,7 @@
 
 .header__logo img {
     aspect-ratio: 102 / 38;
+    object-fit: contain;
 
     @include mq("md") {
         aspect-ratio: 133 / 50;

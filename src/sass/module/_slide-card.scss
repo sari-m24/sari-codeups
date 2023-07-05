@@ -27,19 +27,25 @@
 
 .slide-card__title-wrapper {
     text-align: left;
+    border-bottom: 1px solid $accent-green;
+    padding-bottom: rem(6);
+    @include mq("md") {
+        padding-bottom: rem(3);
+    }
 }
 
 .slide-card__title {
     font-size: rem(16);
     line-height: 1.5;
     margin-top: rem(7.2);
-    padding-bottom: rem(6);
     color: $green;
-    border-bottom: 1px solid $accent-green;
     font-weight: $medium;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
     @include mq("md") {
         margin-top: rem(7);
-        padding-bottom: rem(3);
     }
 }
 
