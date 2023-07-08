@@ -2,13 +2,67 @@
 
 .campaign {
     text-align: center;
-    overflow-x: hidden;
+}
+
+.campaign__inner {
     position: relative;
 }
 
-.campaign__button {
-    margin-top: rem(40);
+.campaign__slider {
+    margin-top: rem(24);
+    padding-bottom: rem(40);
+    margin-right:  calc(50% - 50vw);
     @include mq("md") {
-        margin-top: rem(80);
+        margin-top: rem(39);
+        padding-bottom: rem(80);
     }
+}
+
+
+.campaign__swiper-button {
+    display: none;
+    @include mq("md") {
+        position: absolute;
+        display: flex;
+        width: rem(270);
+        text-rendering: initial;
+        right: rem(11);
+        top: rem(18);
+    }
+}
+
+.campaign__swiper-button-prev,
+.campaign__swiper-button-next {
+    text-rendering: initial;
+    color: transparent;
+    width: rem(90);
+    height: rem(90);
+}
+
+.campaign__swiper-button-prev::after {
+    content: "";
+    width: rem(80);
+    height: rem(80);
+    background-image: url("../images/common/left.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.campaign__swiper-button-next::after {
+    content: "";
+    width: rem(80);
+    height: rem(80);
+    background-image: url("../images/common/right.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.campaign__card {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    display: block;
+    box-sizing: border-box;
 }

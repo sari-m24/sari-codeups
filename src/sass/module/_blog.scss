@@ -2,15 +2,21 @@
 
 .blog {
     text-align: center;
-    background-image: none;
-    
+    position: relative;
+}
+
+.blog::before {
     @include mq("md") {
-        display: block;
+        position: absolute;
+        display: inline-block;
+        content: "";
         width: 100%;
+        height: rem(500);
         background-image: url("../images/common/blog-bg.jpg");
         background-repeat: no-repeat;
-        background-size: 100% 60.4%;
-        background-position: top;
+        background-size: cover;
+        top: 0;
+        left: 0;
     }
 }
 
@@ -37,23 +43,11 @@
 
 .blog__cards {
     margin-top: rem(27);
-    row-gap: rem(40);
-    display: grid;
-    justify-items: center;
-    align-items: center;
     @include mq("md") {
         margin-top: rem(78);
-        grid-template-columns: repeat(3,1fr);
-        column-gap: rem(40);
     }
 }
 
-.blog__card {
-    width: 100%;
-    max-width: rem(600);
-    display: block;
-    background-color: $white;
-}
 
 .blog__button {
     margin-top: rem(39);

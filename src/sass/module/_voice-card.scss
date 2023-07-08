@@ -17,17 +17,20 @@
 
 .voice-card__wrapper {
     display: flex;
-    align-items: end;
     justify-content: space-between;
 }
 
 .voice-card__top {
     width: 100%;
     max-width: rem(276);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .voice-card__label {
     @include mq("md") {
+        margin-top: rem(24);
         display: flex;
         align-items: end;
         justify-content: space-between;

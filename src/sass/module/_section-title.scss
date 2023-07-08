@@ -48,3 +48,18 @@
         color: $green2;
     }
 }
+
+.section-title__main.section-title__main--large {
+    font-size: rem(80);
+    text-transform: capitalize;
+    color: $green;
+    line-height: 1;
+}
+
+
+.section-title__sub.section-title__sub--large{
+    font-size: rem(12);
+    line-height: 1.5;
+    margin-top: rem(-4);
+    color: $accent-green;
+}

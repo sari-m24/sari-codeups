@@ -20,18 +20,22 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
 
     // Campaign スライダー
-    const campaignSwiper = new Swiper('.campaign .js-campaign-swiper', {
-        slidesPerView: '1',
+
+      const campaignSwiper = new Swiper('.js-campaign-swiper', {
+        loop: false,
+        speed: 500,
+        slidesPerView: 1.26,
         spaceBetween: 24,
-        grabCursor: true,
-        navigation: {
-          nextEl: '.campaign .swiper-button-next',
-          prevEl: '.campaign .swiper-button-prev',
-        },
-        breakpoints: {
-          768: {
+        centeredSlides: false,
+        breakpoints:{
+          767:{
+            slidesPerView: 3.49,
             spaceBetween: 40,
           }
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
       });
 

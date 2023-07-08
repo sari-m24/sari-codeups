@@ -83,6 +83,7 @@
     color: $green;
     margin-top: rem(12);
     font-family: "Noto Sans JP",sans-serif;
+    font-style: normal;
     @include mq("md") {
         margin-top: rem(22);
     }
@@ -134,23 +135,6 @@
     @include mq("md") {
         margin-left: rem(5);
     }
-}
-.contact__section-title-main {
-    font-size: rem(80);
-    text-transform: capitalize;
-    color: $green;
-    line-height: 1;
-}
-
-.contact__section-title-main::first-letter{
-    color: $accent-green;
-}
-
-.contact__section-title-sub {
-    font-size: rem(12);
-    line-height: 1.5;
-    margin-top: rem(-4);
-    color: $accent-green;
 }
 
 .contact__text {
