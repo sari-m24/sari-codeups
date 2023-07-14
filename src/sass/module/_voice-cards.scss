@@ -14,8 +14,5 @@
 
 .voice-cards__item {
     width: 100%;
-    max-width: rem(600);
-    @include mq("md") {
-        max-width: rem(520);
-    }
+    max-width: rem(520);
 }

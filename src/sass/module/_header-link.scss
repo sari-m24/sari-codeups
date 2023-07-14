@@ -8,15 +8,14 @@
 
 .header-link__main {
     font-size: rem(18);
-    text-transform: capitalize;
     line-height: 1.4;
 }
 
-.header-link__lowercase {
-    text-transform: lowercase;
+.header-link__main::first-letter {
+    text-transform: uppercase;
 }
 
-.header-link__uppercase {
+.header-link__main.header-link__main--uppercase {
     text-transform: uppercase;
 }
 

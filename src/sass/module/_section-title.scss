@@ -7,7 +7,6 @@
 .section-title__main {
     font-size: rem(32);
     line-height: calc(40 / 32);
-    text-transform: capitalize;
     color: $green;
     @include mq("md") {
         font-size: rem(40);
@@ -17,6 +16,7 @@
 
 .section-title__main::first-letter{
     color: $accent-green;
+    text-transform: uppercase;
 }
 
 .section-title__sub {

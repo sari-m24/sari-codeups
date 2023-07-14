@@ -5,6 +5,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       $(".js-hamburger,.js-drawer").click(function () {
         $(".js-hamburger").toggleClass("is-active");
         $(".js-drawer").fadeToggle();
+        $("body").toggleClass("is-active");
       });
     });
 
@@ -102,7 +103,7 @@ $('.js-page-top').click(function () {
 
 
  //resizeイベント
- $(window).resize(function () {
+$(window).resize(function () {
   if (window.matchMedia("(min-width: 766px)").matches) {
       closeDrawer();
   }
@@ -117,5 +118,7 @@ function closeDrawer() {
   $(".js-drawer").fadeOut();
   $(".js-hamburger").removeClass("is-active");
 }
+
+
 
 });

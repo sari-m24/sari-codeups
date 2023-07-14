@@ -15,7 +15,7 @@
     border: 1px solid $accent-green;
 }
 
-.button__link {
+.button span {
 	display: inline-block;
 	text-align: center;
 	vertical-align: middle;
@@ -31,12 +31,12 @@
     z-index: 1;
 }
 
-.button__link span {
+.button span::first-letter {
     text-transform: capitalize;
 }
 
 
-.button__link::before {
+.button span::before {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -49,15 +49,15 @@
 	z-index: -1;
 }
 
-.button__link:hover::before {
+.button span:hover::before {
 	transform: translateX(0);
 }
 
-.button__link:hover {
+.button span:hover {
 	color: $accent-green;
 }
 
-.button__link::after {
+.button span::after {
     content: "";
     position: absolute;
     width: rem(40);
@@ -71,7 +71,7 @@
     background-size: contain;
 }
 
-.button__link:hover::after{
+.button span:hover::after{
     background-image: url("../images/common/arrow-green.png");
 }
 

@@ -56,7 +56,7 @@
     }
 }
 
-.price__button-wrapper{
+.price__button {
     margin-top: rem(39);
     text-align: center;
     @include mq("md") {

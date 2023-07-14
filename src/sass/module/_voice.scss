@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.voice {
-    text-align: center;
-}
-
 .voice__inner {
     position: relative;
 }
@@ -33,6 +29,7 @@
 }
 
 .voice__button {
+    text-align: center;
     margin-top: rem(42);
     @include mq("md") {
         margin-top: rem(80);
