@@ -5,7 +5,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       $(".js-hamburger,.js-drawer").click(function () {
         $(".js-hamburger").toggleClass("is-active");
         $(".js-drawer").fadeToggle();
-        $("body").toggleClass("is-active");
       });
     });
 
@@ -54,7 +53,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     color.css('width','0%');
     color.on('inview', function(){
         if(counter == 0){
-    　　　　　$(this).delay(200).animate({'width':'100%'},speed,function(){
+          $(this).delay(200).animate({'width':'100%'},speed,function(){
                   image.css('opacity','1');
                   $(this).css({'left':'0' , 'right':'auto'});
                   $(this).animate({'width':'0%'},speed);
@@ -62,63 +61,76 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             counter = 1;
           }
     });
-});
-
-// TOPへ戻るボタン
-function PageTopAnime() {
-
-  var scroll = $(window).scrollTop();
-  $('js-page-top').hide();
-  if (scroll >= 100){
-    $('.js-page-top').fadeIn();
-  }else{
-    $('.js-page-top').fadeOut();
-  }
-
-  var wH = window.innerHeight;
-  var footerPos =  $('footer').offset().top;
-  if(scroll+wH >= (footerPos+10)) {
-    var pos = (scroll+wH) - footerPos+16
-    $('.js-page-top').css('bottom',pos);
-  }else{
-      $('.js-page-top').css('bottom','10px');
-  }
-}
-
-$(window).scroll(function () {
-PageTopAnime();
-});
-
-$(window).on('load', function () {
-PageTopAnime();
-});
-
-
-$('.js-page-top').click(function () {
-  $('body,html').animate({
-      scrollTop: 0
-  }, 500);
-  return false;
-});
-
-
- //resizeイベント
-$(window).resize(function () {
-  if (window.matchMedia("(min-width: 766px)").matches) {
-      closeDrawer();
-  }
   });
 
-function openDrawer() {
-  $(".js-drawer").fadeIn();
-  $(".js-hamburger").addClass("is-active");
-}
+  // TOPへ戻るボタン
+  function PageTopAnime() {
 
-function closeDrawer() {
-  $(".js-drawer").fadeOut();
-  $(".js-hamburger").removeClass("is-active");
-}
+    var scroll = $(window).scrollTop();
+    $('js-page-top').hide();
+    if (scroll >= 100){
+      $('.js-page-top').fadeIn();
+    }else{
+      $('.js-page-top').fadeOut();
+    }
+
+    var wH = window.innerHeight;
+    var footerPos =  $('footer').offset().top;
+    if(scroll+wH >= (footerPos+10)) {
+      var pos = (scroll+wH) - footerPos+16
+      $('.js-page-top').css('bottom',pos);
+    }else{
+        $('.js-page-top').css('bottom','10px');
+    }
+  }
+
+  $(window).scroll(function () {
+  PageTopAnime();
+  });
+
+  $(window).on('load', function () {
+  PageTopAnime();
+  });
 
 
+  $('.js-page-top').click(function () {
+    $('body,html').animate({
+        scrollTop: 0
+    }, 500);
+    return false;
+  });
+
+
+  //resizeイベント
+  $(window).resize(function () {
+    if (window.matchMedia("(min-width: 766px)").matches) {
+        closeDrawer();
+    }
+    });
+
+  function openDrawer() {
+    $(".js-drawer").fadeIn();
+    $(".js-hamburger").addClass("is-active");
+  }
+
+  function closeDrawer() {
+    $(".js-drawer").fadeOut();
+    $(".js-hamburger").removeClass("is-active");
+  }
+
+  // ドロワーメニュー固定
+  var state = false;
+$('.js-hamburger').click(function(){
+  $('.js-drawer').toggleClass('is-active');
+  if (state == false){
+    $(window).on('touchmove.noScroll', function(e) {
+      e.preventDefault();
+    });
+    state = true;
+  } else {
+    $(window).off('.noScroll');
+    state = false;
+  }
+});
 
 });

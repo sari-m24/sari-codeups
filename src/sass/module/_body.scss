@@ -1,0 +1,7 @@
+@use "global" as *;
+
+body.is-active {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}

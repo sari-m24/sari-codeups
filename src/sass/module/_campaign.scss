@@ -55,12 +55,19 @@
     background-size: contain;
 }
 
+.campaign .swiper-slide {
+    height: auto;
+}
+
+.campaign__cards {
+    display: flex;
+    height: 100%;
+}
+
 .campaign__card {
     width: 100%;
-    height: auto;
+    height: 100%;
     z-index: 1;
-    display: block;
-    box-sizing: border-box;
 }
 
 .campaign__button {

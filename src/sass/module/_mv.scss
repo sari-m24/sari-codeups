@@ -19,6 +19,18 @@
     min-height: rem(400);
 }
 
+.mv .swiper {
+    height: inherit;
+}
+
+.mv .swiper-wrapper,
+.mv .swiper-slide {
+    height: inherit;
+}
+
+
+
+
 .mv__title {
     position: absolute;
     z-index: 10;

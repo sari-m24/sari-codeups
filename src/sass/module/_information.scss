@@ -62,6 +62,9 @@
 
 .information__button {
     text-align: center;
-    margin-top: rem(35);
+    margin-top: rem(37);
+    @include mq("md") {
+        margin-top: rem(35);
+    }
 }
 
