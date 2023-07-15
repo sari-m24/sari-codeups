@@ -118,19 +118,21 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(".js-hamburger").removeClass("is-active");
   }
 
-  // ドロワーメニュー固定
-  var state = false;
-$('.js-hamburger').click(function(){
-  $('.js-drawer').toggleClass('is-active');
-  if (state == false){
-    $(window).on('touchmove.noScroll', function(e) {
-      e.preventDefault();
+  $(function(){
+    var state = false;
+    var pos;
+    $(".js-hamburger").click(function(){
+      if (state == false) {
+        pos = $(window).scrollTop();
+        $("body").addClass("fixed").css({"top": -pos});
+        state = true;
+      } else {
+        $("body").removeClass("fixed").css({"top": 0});
+        window.scrollTo(0, pos);
+        state = false;
+      }
     });
-    state = true;
-  } else {
-    $(window).off('.noScroll');
-    state = false;
-  }
-});
+    });
+
 
 });
