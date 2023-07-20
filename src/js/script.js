@@ -2,17 +2,17 @@
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
     // ハンバーガーメニュー
     $(function () {
-      $(".js-hamburger,.js-drawer").click(function () {
+      $(".js-hamburger, .js-drawer").click(function () {
         $(".js-hamburger").toggleClass("is-active");
         $(".js-drawer").fadeToggle();
       });
-    });
+  });
 
     // ドロワーメニューの固定
     $(function(){
       var state = false;
       var pos;
-      $(".js-hamburger").click(function(){
+      $(".js-hamburger, .js-drawer").click(function(){
         if (state == false) {
           pos = $(window).scrollTop();
           $("body").addClass("fixed").css({"top": -pos});
