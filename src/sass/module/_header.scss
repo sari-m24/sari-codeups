@@ -46,6 +46,7 @@
     width: rem(102);
     height: inherit;
     transition: opacity 0.3s;
+    align-items: center;
 
     @include mq("lg") {
         width: rem(133);
@@ -58,7 +59,7 @@
 
 .header__logo img {
     aspect-ratio: 102 / 38;
-    object-fit: contain;
+    object-fit: cover;
 
     @include mq("md") {
         aspect-ratio: 133 / 50;

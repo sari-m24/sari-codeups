@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.blog-layout {
+.top-blog {
     padding-top: rem(81);
     @include mq("md") {
         padding-top: rem(102);
