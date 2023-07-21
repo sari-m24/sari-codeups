@@ -10,6 +10,7 @@
     max-width: 34%;
     top: rem(92);
     position: absolute;
+    z-index: 1;
 
     @include mq("md") {
         top: rem(105);
@@ -28,7 +29,6 @@
 .about-us__img-right {
     width: 100%;
     max-width: 82%;
-    z-index: -1;
     position: relative;
     margin-left: auto;
     margin-top: rem(54);
@@ -49,6 +49,7 @@
 
 .about-us__contents {
     margin-top: rem(40);
+    z-index: 2;
     @include mq("md") {
         margin-left: rem(81);
         width: 100%;

@@ -43,13 +43,13 @@
 
 .header__logo {
     display: flex;
-    width: rem(102);
+    max-width: rem(102);
     height: inherit;
     transition: opacity 0.3s;
     align-items: center;
 
     @include mq("lg") {
-        width: rem(133);
+        max-width: rem(133);
     }
 }
 
@@ -112,3 +112,17 @@
     position: relative;
 }
 
+.header__drawer-menu {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: rem(80);
+    width: 100%;
+    height: 100vh;
+    z-index: 5000;
+    background-color: $accent-green;
+}
+
+.header.is-active {
+    background-color: $accent-green;
+}

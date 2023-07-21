@@ -3,7 +3,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     // ハンバーガーメニュー
     $(function () {
       $(".js-hamburger, .js-drawer").click(function () {
-        $(".js-hamburger").toggleClass("is-active");
+        $(".js-hamburger, .js-header").toggleClass("is-active");
         $(".js-drawer").fadeToggle();
       });
   });
@@ -39,7 +39,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     // Campaign スライダー
 
       const campaignSwiper = new Swiper('.js-campaign-swiper', {
-        loop: false,
+        loop: true,
         speed: 500,
         slidesPerView: 1.26,
         spaceBetween: 24,
@@ -127,12 +127,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   function openDrawer() {
     $(".js-drawer").fadeIn();
-    $(".js-hamburger").addClass("is-active");
+    $(".js-hamburger, .js-header").addClass("is-active");
+
   }
 
   function closeDrawer() {
     $(".js-drawer").fadeOut();
-    $(".js-hamburger").removeClass("is-active");
+    $(".js-hamburger, .js-header").removeClass("is-active");
   }
 
 
