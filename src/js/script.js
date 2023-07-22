@@ -82,37 +82,33 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   // TOPへ戻るボタン
   function PageTopAnime() {
-
     var scroll = $(window).scrollTop();
     $('js-page-top').hide();
-    if (scroll >= 100){
+    if (scroll >= 100) {
       $('.js-page-top').fadeIn();
-    }else{
+    } else {
       $('.js-page-top').fadeOut();
     }
-
     var wH = window.innerHeight;
-    var footerPos =  $('footer').offset().top;
-    if(scroll+wH >= (footerPos+10)) {
-      var pos = (scroll+wH) - footerPos+16
-      $('.js-page-top').css('bottom',pos);
-    }else{
-        $('.js-page-top').css('bottom','10px');
+    var footerPos = $('footer').offset().top;
+    if (scroll + wH >= footerPos + 10) {
+      var pos = scroll + wH - footerPos + 16;
+      $('.js-page-top').css('bottom', pos);
+    } else {
+      $('.js-page-top').css('bottom', '10px');
     }
   }
 
   $(window).scroll(function () {
-  PageTopAnime();
+    PageTopAnime();
   });
-
   $(window).on('load', function () {
-  PageTopAnime();
+    PageTopAnime();
   });
-
 
   $('.js-page-top').click(function () {
     $('body,html').animate({
-        scrollTop: 0
+      scrollTop: 0
     }, 500);
     return false;
   });
@@ -135,7 +131,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(".js-drawer").fadeOut();
     $(".js-hamburger, .js-header").removeClass("is-active");
   }
-
 
 
 });
