@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.campaign {
+    overflow: hidden;
+}
+
 .campaign__inner {
     position: relative;
 }
@@ -7,7 +11,7 @@
 .campaign__slider {
     margin-top: rem(24);
     padding-bottom: rem(8);
-    margin-right:  calc(50% - 49.4vw);
+    margin-right:  calc(50% - 50vw);
     @include mq("md") {
         margin-top: rem(39);
     }
@@ -19,10 +23,10 @@
     @include mq("md") {
         position: absolute;
         display: flex;
-        width: rem(270);
+        width: rem(280);
         text-rendering: initial;
         right: rem(11);
-        top: rem(18);
+        top: rem(24);
     }
 }
 
@@ -30,8 +34,8 @@
 .campaign__swiper-button-next {
     text-rendering: initial;
     color: transparent;
-    width: rem(90);
-    height: rem(90);
+    width: rem(92);
+    height: rem(92);
 }
 
 .campaign__swiper-button-prev::after {
