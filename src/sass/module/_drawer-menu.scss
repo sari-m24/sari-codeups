@@ -2,11 +2,10 @@
 
 .drawer-menu__addClass {
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: inherit;
-    overflow-y: scroll;
+    overflow: scroll;
     padding: rem(20) 0 rem(100);
-
 }
 
 .drawer-menu__inner {
