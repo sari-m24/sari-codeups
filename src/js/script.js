@@ -40,7 +40,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
       const campaignSwiper = new Swiper('.js-campaign-swiper', {
         loop: true,
-        speed: 500,
+        autoplay: {
+          delay: 2000,
+        },
+        speed: 2000,
         slidesPerView: 1.26,
         spaceBetween: 24,
         centeredSlides: false,
