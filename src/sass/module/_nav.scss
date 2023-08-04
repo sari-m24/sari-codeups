@@ -1,6 +1,18 @@
 @use "global" as *;
 
-.nav-link {
+
+.nav__items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.nav__items + .nav__items {
+    margin-top: rem(12);
+}
+
+.nav__item {
     display: inline-block;
     width: 100%;
     font-size: clamp(0.5rem, -1.885rem + 12.31vw, 1rem);
@@ -11,11 +23,31 @@
     transition: opacity 0.3s;
 }
 
-.nav-link:hover {
+.nav__item a {
+    display: inline-block;
+    width: 100%;
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+}
+
+.nav__item a span {
+    margin-left: rem(18);
+    @include mq("md") {
+        margin-left: 0;
+    }
+}
+
+.nav__item a br {
+    @include mq("md") {
+        display: none;
+    }
+}
+
+.nav__item a:hover {
     opacity: 0.7;
 }
 
-.nav-link::before {
+.nav__item a::before {
     display: inline-block;
     content: "";
     width: rem(18);
@@ -29,10 +61,10 @@
     background-size: contain;
 }
 
-.nav-link.nav-link--no-icon {
+.nav__item.nav__item--no-icon {
     font-weight: $normal;
 }
 
-.nav-link.nav-link--no-icon::before {
+.nav__item.nav__item--no-icon a::before {
     background-image: none;
 }

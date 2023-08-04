@@ -23,39 +23,3 @@
     row-gap: rem(20);
     margin-top: rem(24);
 }
-
-
-.drawer-menu__items {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.drawer-menu__item {
-    display: block;
-    width: 100%;
-}
-
-.drawer-menu__item:nth-child(2) {
-    margin-top: rem(10);
-}
-
-.drawer-menu__link {
-    padding-top: rem(10);
-    padding-bottom: rem(10);
-
-}
-
-.drawer-menu__link span {
-    margin-left: rem(18);
-    @include mq("md") {
-        margin-left: 0;
-    }
-}
-
-.drawer-menu__link br {
-    @include mq("md") {
-        display: none;
-    }
-}

@@ -12,10 +12,20 @@
     }
 }
 
+.price-list__body {
+    margin-top: rem(11);
+    @include mq("md") {
+        margin-top: rem(8);
+    }
+}
+
 .price-list__content-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.price-list__content-wrapper + .price-list__content-wrapper {
     margin-top: rem(11);
     @include mq("md") {
         margin-top: rem(8);
