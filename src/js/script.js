@@ -127,7 +127,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   function openDrawer() {
     $(".js-drawer").fadeIn();
     $(".js-hamburger, .js-header").addClass("is-active");
-
   }
 
   function closeDrawer() {
@@ -137,3 +136,50 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
 
 });
+
+// タブ
+$(function(){
+  $('.js-tab-button').on('click', function(){
+    var index = $('.js-tab-button').index(this);
+    $('.js-tab-button').removeClass('current');
+    $(this).addClass('current');
+    $('.tab .tab-content.show').removeClass('show');
+    $('.tab .tab-content').eq(index).addClass('show');
+  });
+});
+
+// アコーディオン
+$(function () {
+  $(".js-accordion__item:first-child .js-accordion__content").css(
+    "display",
+    "block"
+  ); 
+  $(".js-accordion__item:first-child .js-accordion__title").addClass(
+    "is-open"
+  );　// 一行目のみ開いているようにする処理
+  $(".js-accordion__title").on("click", function () {
+    $(this).toggleClass("is-open");
+    $(this).next().slideToggle(300);
+  });
+});
+
+
+$(".js-toggle").on("click", function() {
+     $(this).next().slideToggle();
+     $(this).toggleClass("is-active");
+ });
+
+//モーダル
+ $(".js-modal").click(function() {
+  // クリックした画像のHTML要素を取得して、置き換える
+  $(".gallery__modal-content").html($(this).prop('outerHTML'));
+
+  $(".gallery__modal").fadeIn(200);
+    return false;
+  });
+
+  $(".gallery__modal").click(function () {
+    // 非表示にする
+    $(".gallery__modal").fadeOut(200);
+    return false;
+  });

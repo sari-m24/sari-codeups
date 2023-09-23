@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.sub-mv-about-us {
+        background-image: url("../images/common/aboutus-sub-mv-sp.webp");
+    @include mq("md") {
+        background-image: url("../images/common/aboutus-sub-mv.webp");
+    }
+}
+
+

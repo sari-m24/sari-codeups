@@ -35,6 +35,17 @@
     }
 }
 
+.campaign-card__title-wrapper.campaign-card__title-wrapper--padding {
+    padding-bottom: rem(4.4);
+    @include mq("md") {
+        padding-left: rem(24);
+        padding-right: rem(24);
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+
+
 .campaign-card__title {
     font-size: rem(16);
     line-height: 1.5;
@@ -44,6 +55,16 @@
     @include mq("md") {
         margin-top: rem(7);
     }
+}
+
+.campaign-card__title--large {
+    @include mq("md") {
+        font-size: rem(24);
+    }
+}
+
+.campaign-card__title-wrapper--center {
+    text-align: center;
 }
 
 
@@ -65,6 +86,14 @@
     background-color: $accent-green;
 }
 
+.campaign-card__text-wrapper.campaign-card__text-wrapper--padding {
+    @include mq("md") {
+        padding-left: rem(24);
+        padding-right: rem(24);
+        padding-bottom: rem(43.2);
+    }
+}
+
 .campaign-card__text {
     font-size: rem(14);
     line-height: 1.714;
@@ -78,6 +107,13 @@
     }
 }
 
+.campaign-card__text.campaign-card__text--margin {
+    @include mq("md") {
+        margin-top: rem(23.4);
+        letter-spacing: 0.05em;
+    }
+}
+
 .campaign-card__price {
     display: flex;
     justify-content: center;
@@ -88,6 +124,12 @@
     line-height: 1;
     @include mq("md") {
         margin-top: rem(3);
+    }
+}
+
+.campaign-card__price.campaign-card__price--margin {
+    @include mq("md") {
+        margin-top: rem(4.6);
     }
 }
 
@@ -127,3 +169,30 @@
     }
 }
 
+.campaign-card__add-wrapper {
+    margin-top: rem(25.6);
+}
+
+.campaign-card__contact {
+    margin-top: rem(27.2);
+    text-align: center;
+}
+
+.campaign-card__contact-text{
+    font-size: rem(14);
+    color: $accent-green;
+}
+
+.campaign-card__period {
+    font-family: $second-font-family;
+    font-size: rem(16);
+    font-weight: $bold;
+}
+
+.campaign-card__contact-text p:nth-child(2) {
+    margin-top: rem(5.6);
+}
+
+.campaign-card__button {
+    margin-top: rem(11.2);
+}

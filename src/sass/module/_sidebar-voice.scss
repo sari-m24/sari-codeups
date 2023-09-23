@@ -1,0 +1,34 @@
+@use "global" as *;
+
+.sidebar-voice {
+
+}
+
+.sidebar-voice__item {
+
+}
+
+.sidebar-voice__image {
+
+}
+
+.sidebar-voice__body {
+    margin-top: rem(16);
+    color: $green;
+}
+
+.sidebar-voice__age {
+    font-size: rem(12);
+}
+
+.sidebar-voice__title {
+    font-size: rem(24);
+    font-weight: $medium;
+    margin-top: rem(8);
+}
+
+.sidebar-voice__button {
+    margin-top: rem(40);
+    text-align: center;
+}
+

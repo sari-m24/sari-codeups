@@ -1,0 +1,74 @@
+@use "global" as *;
+
+
+.gallery__content {
+  margin-top: rem(40);
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+  @include mq("md") {
+    margin-top: rem(80);
+    display: grid;
+    grid-template-columns: 1fr .16fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: dense;
+}
+}
+
+.gallery__image {
+  cursor: pointer;
+  aspect-ratio: 345 / 219;
+  @include mq("md") {
+    aspect-ratio: 580 / 369;
+  }
+}
+
+.gallery__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery__image {
+  @include mq("md") {
+    grid-column: span 2;
+  }
+}
+
+.gallery__image:nth-child(6n + 1),
+.gallery__image:nth-child(6n) {
+    aspect-ratio: 345 / 523;
+    @include mq("md") {
+      aspect-ratio: 492 / 746;
+      grid-row: span 2;
+      grid-column: span 1;
+    }
+  }
+
+.gallery__modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery__modal-content {
+  height: 100%;
+  background-color: rgba(32,32,32, 0.8);
+}
+
+.gallery__modal-content img{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 63%;
+  max-height: 76.3%;
+  object-fit: contain;
+}
+

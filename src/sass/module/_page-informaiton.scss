@@ -1,0 +1,45 @@
+@use "global" as *;
+
+
+.page-information__tab-list {
+   
+}
+
+.page-information__tab-button {
+    width: rem(300);
+    font-size: rem(24);
+    color: $accent-green;
+    border: none;
+    background-color: $green2;
+    padding: rem(13);
+}
+
+.page-information__tab-button span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-information__tab-button span::before {
+    width: rem(64);
+    height: rem(64);
+    margin-right: rem(8);
+    content: "";
+    display: inline-block;
+    background-image: url(../images/common/whale.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.page-information__tab-button.current {
+    background-color: $accent-green;
+    color: $white;
+}
+
+.page-information__tab-button.current span::before {
+    background-image: url(../images/common/white-whale.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
