@@ -1,43 +1,79 @@
 @use "global" as *;
 
 .wp-pagenavi {
-	display: flex;
-	justify-content: center;
-	gap: rem(12);
-
+  display: flex;
+  justify-content: center;
+  gap: rem(12);
 }
-.wp-pagenavi a, .wp-pagenavi span {
-	justify-content: center;
-	color: $accent-green;
-	background-color: $white;
-	width: rem(38);
-	height: rem(38);
-	padding-top: rem(6);
-	padding-bottom: rem(6);
-	transition: 0.3s ease;
-	text-align: center;
-	text-decoration: none;
-    font-family: $second-font-family;
-	border: 1px solid $accent-green;
-	font-size: rem(16);
-	font-weight: $bold;
+.wp-pagenavi a,
+.wp-pagenavi span {
+  position: relative;
+  justify-content: center;
+  color: $accent-green;
+  background-color: $white;
+  width: rem(38);
+  height: rem(38);
+  padding-top: rem(6);
+  padding-bottom: rem(6);
+  transition: 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  font-family: $second-font-family;
+  border: 1px solid $accent-green;
+  font-size: rem(16);
+  font-weight: $bold;
 }
-.wp-pagenavi a:hover{
-	color: $white;
-	background-color: $accent-green;
-    }
+.wp-pagenavi a:hover {
+  color: $white;
+  background-color: $accent-green;
+}
 
-.wp-pagenavi span.current{
-	color: $white;
-	background-color: $accent-green;
-	margin-left: 0;
-    }
-
+.wp-pagenavi span.current {
+  color: $white;
+  background-color: $accent-green;
+  margin-left: 0;
+}
 
 .wp-pagenavi a:first-child {
-	margin-right: rem(30);
+  margin-right: rem(28.4);
 }
 
 .wp-pagenavi a:last-child {
-	margin-left: rem(30);
+  margin-left: rem(28.4);
+}
+
+.wp-pagenavi a.previouspostslink::before {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border: 1px solid;
+  border-color: transparent transparent $accent-green $accent-green;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 34%;
+  left: 45%;
+  transition: 0.3s;
+}
+
+.wp-pagenavi a.nextpostslink::before {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border: 1px solid;
+  border-color: $accent-green $accent-green transparent transparent;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 34%;
+  left: 21%;
+  transition: 0.3s;
+}
+
+.wp-pagenavi a.nextpostslink:hover::before {
+  border-color: $white $white transparent transparent;
+}
+
+.wp-pagenavi a.previouspostslink:hover::before {
+  border-color: transparent transparent $white $white;
 }

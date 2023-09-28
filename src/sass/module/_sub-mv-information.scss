@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.sub-mv-information {
+  background-image: url("../images/common/information-sub-mv-sp.webp");
+  @include mq("md") {
+    background-image: url("../images/common/information-sub-mv.webp");
+  }
+}

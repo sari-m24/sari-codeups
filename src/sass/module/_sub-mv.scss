@@ -1,45 +1,45 @@
 @use "global" as *;
 
 .sub-mv {
-    width: 100%;
-    height: rem(460);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    @include mq("md") {
-        height: rem(548);
-    }
+  width: 100%;
+  height: rem(460);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include mq("md") {
+    height: rem(548);
+  }
 }
 
 .sub-mv__inner {
-    position: relative;
-    width: 100%;
-    height: inherit;
+  position: relative;
+  width: 100%;
+  height: inherit;
 }
 
 .sub-mv__title {
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: $white;
-    text-align: center;
-    @include mq("md") {
-        top: 59.18%;
-    }
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $white;
+  text-align: center;
+  @include mq("md") {
+    top: 59.18%;
+  }
 }
 
 .sub-mv__title-text {
-    font-size: rem(40);
-    font-family: $second-font-family;
-    font-weight: normal;
-    @include mq("md") {
-        font-size: rem(80);
-}
+  font-size: rem(40);
+  font-family: $second-font-family;
+  font-weight: normal;
+  @include mq("md") {
+    font-size: rem(80);
+  }
 }
 
 .sub-mv__title-text::first-letter {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
