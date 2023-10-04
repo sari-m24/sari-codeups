@@ -1,0 +1,115 @@
+@use "global" as *;
+
+.sidebar-campaign-card {
+  box-shadow: rem(2) rem(2) rem(10) 0 rgba($color: #000000, $alpha: 0.25);
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar-campaign-card__img {
+  aspect-ratio: 294 / 188;
+}
+
+.sidebar-campaign-card__img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar-campaign-card__title-wrapper {
+  text-align: center;
+  padding-top: rem(17);
+  padding-left: rem(16);
+  padding-right: rem(16);
+  padding-bottom: rem(6);
+  flex-grow: 1;
+  @include mq("md") {
+    padding-top: rem(19.2);
+    padding-bottom: rem(5);
+  }
+}
+
+.sidebar-campaign-card__title {
+  font-size: rem(16);
+  line-height: 1.5;
+  color: $green;
+  font-weight: $medium;
+}
+
+.sidebar-campaign-card__text-wrapper {
+  margin-top: auto;
+  padding-left: rem(16);
+  padding-right: rem(16);
+  padding-bottom: rem(22);
+  @include mq("md") {
+    padding-bottom: rem(24);
+  }
+}
+
+.sidebar-campaign-card__text-wrapper::before {
+  content: "";
+  width: 100%;
+  height: rem(1);
+  display: block;
+  background-color: $accent-green;
+}
+
+.sidebar-campaign-card__text {
+  font-size: rem(14);
+  line-height: 1.714;
+  margin-top: rem(8);
+  text-align: center;
+  font-weight: $normal;
+  color: $green;
+  @include mq("md") {
+    margin-top: rem(7.4);
+    font-size: rem(14);
+  }
+}
+
+.sidebar-campaign-card__price {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-family: $second-font-family;
+  font-weight: $bold;
+  margin-top: rem(8);
+  line-height: 1;
+  @include mq("md") {
+    margin-top: rem(6.8);
+  }
+}
+
+.sidebar-campaign-card__price.sidebar-campaign-card__price--margin {
+  @include mq("md") {
+    margin-top: rem(4.6);
+  }
+}
+
+.sidebar-campaign-card__original-price {
+  position: relative;
+  font-size: rem(20);
+  color: $green;
+}
+
+.sidebar-campaign-card__original-price::before {
+  position: absolute;
+  content: "";
+  display: block;
+  transform: rotate(0);
+  background-color: #c94800;
+  width: 102%;
+  height: rem(3);
+  top: 43%;
+  left: 0;
+
+  @include mq("md") {
+    top: 43%;
+  }
+}
+
+.sidebar-campaign-card__discount-price {
+  font-size: rem(32);
+  color: $accent-green;
+  margin-left: rem(16);
+}

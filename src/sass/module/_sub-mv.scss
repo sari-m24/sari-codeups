@@ -43,3 +43,45 @@
 .sub-mv__title-text::first-letter {
   text-transform: uppercase;
 }
+
+.sub-mv.sub-mv--about-us {
+  background-image: url("../images/common/aboutus-sub-mv-sp.webp");
+  @include mq("md") {
+    background-image: url("../images/common/aboutus-sub-mv.webp");
+  }
+}
+
+.sub-mv.sub-mv--blog {
+  background-image: url("../images/common/blog-sub-mv-sp.webp");
+  @include mq("md") {
+    background-image: url("../images/common/blog-sub-mv.webp");
+  }
+}
+
+.sub-mv.sub-mv--campaign {
+  background-image: url("../images/common/campaign-sub-mv-sp.webp");
+  @include mq("md") {
+    background-image: url("../images/common/campaign-sub-mv.webp");
+  }
+}
+
+.sub-mv.sub-mv--information {
+  background-image: url("../images/common/information-sub-mv-sp.webp");
+  @include mq("md") {
+    background-image: url("../images/common/information-sub-mv.webp");
+  }
+}
+
+.sub-mv.sub-mv--price {
+  background-image: url("../images/common/price-sub-mv-sp.webp");
+  @include mq("md") {
+    background-image: url("../images/common/price-sub-mv.webp");
+  }
+}
+
+.sub-mv.sub-mv--voice {
+  background-image: url("../images/common/voice-sub-mv-sp.webp");
+  @include mq("md") {
+    background-image: url("../images/common/voice-sub-mv.webp");
+  }
+}

@@ -1,8 +1,0 @@
-@use "global" as *;
-
-.sub-mv-voice {
-  background-image: url("../images/common/voice-sub-mv-sp.webp");
-  @include mq("md") {
-    background-image: url("../images/common/voice-sub-mv.webp");
-  }
-}

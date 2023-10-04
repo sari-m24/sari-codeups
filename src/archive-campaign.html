@@ -47,7 +47,7 @@
   </head>
   <body>
     <!-- ヘッダー -->
-    <header class="header header-layout js-header">
+    <header class="header layout-header js-header">
       <div class="header__inner">
         <div class="header__name">
           <a class="header__logo" href="index.html"
@@ -75,7 +75,7 @@
               </a>
             </li>
             <li class="header__item">
-              <a href="#" class="header__link header-link">
+              <a href="home.html" class="header__link header-link">
                 <div class="header-link__main">blog</div>
                 <div class="header-link__sub">ブログ</div>
               </a>
@@ -157,7 +157,7 @@
               </ul>
               <ul class="nav__items">
                 <li class="nav__item">
-                  <a href="#">ブログ</a>
+                  <a href="home.html">ブログ</a>
                 </li>
               </ul>
             </div>
@@ -210,7 +210,7 @@
     </header>
 
     <!-- 下層ページのメインビュー -->
-    <div class="sub-mv sub-mv-campaign">
+    <div class="sub-mv sub-mv--campaign">
       <div class="sub-mv__inner">
         <div class="sub-mv__title">
           <h1 class="sub-mv__title-text">campaign</h1>
@@ -221,11 +221,13 @@
     <!-- パンくず -->
     <div class="breadcrumbs">
       <div class="breadcrumbs__inner inner">
-        <div>TOP&nbsp;&gt;&nbsp;キャンペーン</div>
+        <span
+          ><a href="index.html"><span>TOP</span></a></span
+        >&nbsp;&gt;&nbsp;<span><span>キャンペーン</span></span>
       </div>
     </div>
 
-    <div class="archive-campaign sub-campaign">
+    <section class="archive-campaign layout-archive-campaign">
       <div class="archive-campaign__inner inner">
         <div class="archive-campaign__contents">
           <ul class="archive-campaign__category-list category-list">
@@ -275,7 +277,11 @@
                 </p>
                 <div class="campaign-card__price campaign-card__price--margin">
                   <div class="campaign-card__original-price">¥56,000</div>
-                  <div class="campaign-card__discount-price">¥46,000</div>
+                  <div
+                    class="campaign-card__discount-price campaign-card__discount-price--margin"
+                  >
+                    ¥46,000
+                  </div>
                 </div>
                 <div class="campaign-card__add-wrapper u-desktop">
                   <p class="campaign-card__add-text text">
@@ -319,7 +325,11 @@
                 </p>
                 <div class="campaign-card__price">
                   <div class="campaign-card__original-price">¥24,000</div>
-                  <div class="campaign-card__discount-price">¥18,000</div>
+                  <div
+                    class="campaign-card__discount-price campaign-card__discount-price--margin"
+                  >
+                    ¥18,000
+                  </div>
                 </div>
                 <div class="campaign-card__add-wrapper u-desktop">
                   <p class="campaign-card__add-text text">
@@ -361,7 +371,11 @@
                 <p class="campaign-card__text">全部コミコミ(お一人様)</p>
                 <div class="campaign-card__price">
                   <div class="campaign-card__original-price">¥10,000</div>
-                  <div class="campaign-card__discount-price">¥8,000</div>
+                  <div
+                    class="campaign-card__discount-price campaign-card__discount-price--margin"
+                  >
+                    ¥8,000
+                  </div>
                 </div>
                 <div class="campaign-card__add-wrapper u-desktop">
                   <p class="campaign-card__add-text text">
@@ -403,7 +417,11 @@
                 <p class="campaign-card__text">全部コミコミ(お一人様)</p>
                 <div class="campaign-card__price">
                   <div class="campaign-card__original-price">¥20,000</div>
-                  <div class="campaign-card__discount-price">¥16,000</div>
+                  <div
+                    class="campaign-card__discount-price campaign-card__discount-price--margin"
+                  >
+                    ¥16,000
+                  </div>
                 </div>
                 <div class="campaign-card__add-wrapper u-desktop">
                   <p class="campaign-card__add-text text">
@@ -425,8 +443,8 @@
           </div>
         </div>
       </div>
-    </div>
-
+    </section>
+    <!-- ページネーション -->
     <div class="archive-campaign__pagenavi">
       <div class="wp-pagenavi">
         <a class="previouspostslink" rel="prev" href="#"></a>
@@ -439,8 +457,8 @@
         <a class="nextpostslink" rel="next" href="#"></a>
       </div>
     </div>
-
-    <section class="contact sub-contact">
+    <!-- contact -->
+    <section class="contact layout-sub-contact">
       <div class="contact__inner inner">
         <div class="contact__illust">
           <img
@@ -490,7 +508,7 @@
     </section>
 
     <!-- フッター -->
-    <footer class="footer footer-layout">
+    <footer class="footer layout-footer">
       <div class="footer__inner inner">
         <div class="footer__wrapper">
           <a href="index.html" class="footer__logo"
@@ -548,7 +566,7 @@
             </ul>
             <ul class="nav__items">
               <li class="nav__item">
-                <a href="#">ブログ</a>
+                <a href="home.html">ブログ</a>
               </li>
             </ul>
           </div>

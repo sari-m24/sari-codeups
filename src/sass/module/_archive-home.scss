@@ -1,10 +1,19 @@
 @use "global" as *;
 
-.archive-campaign {
+.archive-home {
   position: relative;
 }
 
-.archive-campaign__inner::before {
+.archive-home__inner {
+  display: block;
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: 1fr 0.42fr;
+    gap: rem(80);
+  }
+}
+
+.archive-home__inner::before {
   content: "";
   background-image: url("../images/common/fish2.png");
   background-position: center;
@@ -17,9 +26,9 @@
   height: clamp(rem(55), 50%, rem(80));
   left: calc(50% - min(45.9%, 18.6rem));
   z-index: -1;
-  top: rem(-38);
+  top: rem(-36.4);
   @include mq("md") {
-    top: rem(-70);
+    top: rem(-70.8);
     max-width: rem(300);
     width: clamp(rem(120), 50%, rem(300));
     height: clamp(rem(55), 50%, rem(138));
@@ -27,23 +36,13 @@
   }
 }
 
-.archive-campaign__cards {
-  display: grid;
-  row-gap: rem(40.8);
-  justify-items: center;
-  align-items: center;
-  padding-left: rem(33);
-  padding-right: rem(33);
-  margin-top: rem(40);
+.archive-home__sidebar {
+  margin-top: rem(80);
   @include mq("md") {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: rem(40);
-    row-gap: rem(80);
-    padding-left: rem(0);
-    padding-right: rem(0);
+    margin-top: 0;
   }
 }
 
-.archive-campaign__pagenavi {
+.archive-home__pagenavi {
   margin-top: rem(80);
 }

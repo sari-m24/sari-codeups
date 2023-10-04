@@ -1,69 +1,83 @@
 @use "global" as *;
 
 .blog-card {
-    display: flex;
-    flex-direction: column;
-    background-color: $white;
-    padding: rem(16) rem(16) rem(24) rem(16);
-    box-shadow: rem(2) rem(2) rem(10) 0 rgba($color: #000000, $alpha: 0.25);
-    transition: opacity 0.5s;
-    @include mq("md") {
-        padding: rem(16) rem(16) rem(18);
-}
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: rem(16) rem(16) rem(18);
+  box-shadow: rem(2) rem(2) rem(10) 0 rgba($color: #000000, $alpha: 0.25);
+  transition: transform 0.5s ease;
+  @include mq("md") {
+    padding: rem(16);
+  }
 }
 
-.blog-card:hover {
-    opacity: 0.7;
+.blog-card.blog-card--padding {
+  padding-bottom: rem(19.2);
+}
+
+.blog-card:hover img {
+  transform: scale(1.1);
 }
 
 .blog-card__img {
-    width: 100%;
+  aspect-ratio: 301 / 201;
+  overflow: hidden;
 }
 
 .blog-card__img img {
-    aspect-ratio: 301 / 201;
-    object-fit: cover;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  transition: transform 0.6s ease;
 }
 
 .blog-card__body-top {
-    margin-top: rem(19);
+  margin-top: rem(19);
+  @include mq("md") {
+    margin-top: rem(17.4);
+  }
+}
+
+.blog-card__body-top.blog-card__body-top--margin {
+  margin-top: rem(19);
+  @include mq("md") {
+    margin-top: rem(20.6);
+  }
 }
 
 .blog-card__meta {
-    font-size: rem(12);
-    line-height: 1;
-    color: $green;
+  font-size: rem(12);
+  line-height: 1;
+  color: $green;
 }
 
 .blog-card__title {
-    margin-top: rem(1);
-    font-size: rem(16);
-    line-height: 1.5;
-    color: $green;
-    font-weight: $medium;
-    margin-bottom: auto;
-    flex-grow: 1;
-    @include mq("md") {
-        padding-bottom: rem(2);
-    }
+  font-size: rem(16);
+  line-height: 1.5;
+  color: $green;
+  font-weight: $medium;
+  margin-bottom: auto;
+  flex-grow: 1;
 }
 
 .blog-card__text::before {
-    content: "";
-    width: 100%;
-    height: rem(1);
-    background-color: $accent-green;
-    display: block;
-    margin-bottom: rem(19);
+  content: "";
+  width: 100%;
+  height: rem(1);
+  background-color: $accent-green;
+  display: inline-block;
+  margin-bottom: rem(14.2);
+  @include mq("md") {
+    margin-bottom: rem(14.6);
+  }
 }
 
-.blog-card--row {
-   flex-direction: row;
-   padding: rem(16);
-}
-
-.blog-card__body-top--margin {
-    margin-top: 0;
-    margin-left: rem(16);
-    width: 100%;
+.blog-card__text.blog-card__text--margin::before {
+  content: "";
+  width: 100%;
+  height: rem(1);
+  background-color: $accent-green;
+  display: inline-block;
+  margin-bottom: rem(14.2);
 }

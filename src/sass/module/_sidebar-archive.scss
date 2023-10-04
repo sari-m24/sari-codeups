@@ -1,38 +1,57 @@
 @use "global" as *;
 
 .sidebar-archive {
-    color: $accent-green;
-    font-size: rem(24);
+  color: $accent-green;
+  font-size: rem(24);
+  font-family: "Noto sans JP";
 }
 
 .sidebar-archive__lists {
-    display: none;
+  display: block;
 }
 
 .sidebar-archive__toggle-btn,
 .sidebar-archive__item {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  margin-left: rem(2);
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+
+.sidebar-archive__toggle-btn:hover,
+.sidebar-archive__item:hover {
+  opacity: 0.7;
 }
 
 .sidebar-archive__toggle-btn::before,
 .sidebar-archive__item::before {
-    display: inline-block;
-    content: "";
-    margin-right: rem(8);
-    width: rem(24);
-    height: rem(24);
-    background-image: url("../images/common/triangle.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transition: 0.3s transform;
+  display: inline-block;
+  content: "";
+  margin-right: rem(6.4);
+  width: rem(24);
+  height: rem(24);
+  background-image: url("../images/common/triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 0.3s transform;
 }
 
 .sidebar-archive__toggle-btn.is-active::before {
-   transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.sidebar-archive__toggle-btn:first-child::before {
+  transform: rotate(90deg);
+  margin-top: rem(4.6);
+}
+
+.sidebar-archive__toggle-btn.is-active:first-child:before {
+  transform: rotate(0deg);
 }
 
 .sidebar-archive__item {
-    margin-left: rem(24);
+  margin-left: rem(27.2);
+  margin-top: rem(3.7);
 }

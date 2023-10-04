@@ -1,8 +1,8 @@
 @use "global" as *;
 
-.sub-voice {
+.layout-archive-about-us {
   margin-top: rem(39.2);
   @include mq("md") {
-    margin-top: rem(137.2);
+    margin-top: rem(136.9);
   }
 }

@@ -1,68 +1,69 @@
 @use "global" as *;
 
 .information {
-    background-color: $green2;
+  background-color: $green2;
 }
 
 .information__contents {
-    margin-top: rem(27);
-    @include mq("md") {
-        margin-top: rem(40);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  margin-top: rem(27);
+  @include mq("md") {
+    margin-top: rem(40);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .information__img {
-    width: 100%;
-    margin: 0 auto;
-    @include mq("md") {
-        max-width: rem(540);
-    }
+  width: 100%;
+  margin: 0 auto;
+  @include mq("md") {
+    max-width: rem(540);
+  }
 }
 
 .information__img img {
-    @include mq("md") {
-        aspect-ratio: 540 / 356;
-        object-fit: cover;
-    }
+  @include mq("md") {
+    aspect-ratio: 540 / 356;
+    object-fit: cover;
+  }
 }
 
 .information__text-wrapper {
-    width: 100%;
-    margin-top: rem(27);
-    @include mq("md") {
-        max-width: rem(492);
-        margin-top: 0;
-        margin-left: rem(48);
-    }
+  width: 100%;
+  margin-top: rem(27);
+  @include mq("md") {
+    max-width: rem(492);
+    margin-top: 0;
+    margin-left: rem(48);
+  }
 }
 
 .information__text-title {
-    font-size: rem(20);
-    line-height: 1.2;
-    color: $green;
-    border-bottom: 1px solid $accent-green;
-    font-weight: $bold;
+  font-size: rem(20);
+  line-height: 1.2;
+  color: $green;
+  border-bottom: 1px solid $accent-green;
+  font-weight: $bold;
 
-    @include mq("md"){
-        font-size: rem(24);
-        line-height: 1;
-        padding-bottom: rem(3);
-    }
+  @include mq("md") {
+    font-size: rem(24);
+    line-height: 1;
+    padding-bottom: rem(3);
+  }
 }
 
-
 .information__text {
-    margin-top: rem(11);
+  margin-top: rem(11);
+  @include mq("md") {
+    margin-top: rem(12.6);
+  }
 }
 
 .information__button {
-    text-align: center;
-    margin-top: rem(37);
-    @include mq("md") {
-        margin-top: rem(35);
-    }
+  text-align: center;
+  margin-top: rem(37);
+  @include mq("md") {
+    margin-top: rem(35);
+  }
 }
-

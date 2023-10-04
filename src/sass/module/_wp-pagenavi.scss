@@ -56,6 +56,14 @@
   transition: 0.3s;
 }
 
+.wp-pagenavi a.previouspostslink.previouspostslink--single {
+  margin-right: rem(34.8);
+}
+
+.wp-pagenavi a.nextpostslink.nextpostslink--single {
+  margin-left: rem(34.8);
+}
+
 .wp-pagenavi a.nextpostslink::before {
   content: "";
   display: inline-block;

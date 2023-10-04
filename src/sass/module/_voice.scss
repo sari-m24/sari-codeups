@@ -1,56 +1,56 @@
 @use "global" as *;
 
 .voice__inner {
-    position: relative;
+  position: relative;
 }
 
 .voice__illust-top {
-    display: none;
-    @include mq("md") {
-        display: inline-block;
-        position: absolute;
-        width: 100%;
-        max-width: rem(301);
-        top: rem(-121);
-        right: clamp(rem(500), 68.152778vw, rem(882));
-    }
+  display: none;
+  @include mq("md") {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    max-width: rem(301);
+    top: rem(-121);
+    right: clamp(rem(500), 68.152778vw, rem(882));
+  }
 }
 
 .voice__illust-top img {
-    aspect-ratio: 301 / 138;
-    object-fit: cover;
+  aspect-ratio: 301 / 138;
+  object-fit: cover;
 }
 
 .voice__cards {
-    margin-top: rem(42);
-    display: grid;
-    height: 100%;
-    @include mq("md") {
-        margin-top: rem(28);
-    }
+  margin-top: rem(40);
+  display: grid;
+  height: 100%;
+  @include mq("md") {
+    margin-top: rem(28);
+  }
 }
 
 .voice__button {
-    text-align: center;
-    margin-top: rem(42);
-    @include mq("md") {
-        margin-top: rem(80);
-}
+  text-align: center;
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(80);
+  }
 }
 
 .voice__illust-bottom {
-    display: none;
-    @include mq("md") {
-        display: inline-block;
-        position: absolute;
-        width: 100%;
-        max-width: rem(71);
-        bottom: rem(-70);
-        right: rem(24);
-    }
+  display: none;
+  @include mq("md") {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    max-width: rem(71);
+    bottom: rem(-70);
+    right: rem(24);
+  }
 }
 
 .voice__illust-bottom img {
-    aspect-ratio: 71 / 162;
-    object-fit: cover;
+  aspect-ratio: 71 / 162;
+  object-fit: cover;
 }

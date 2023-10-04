@@ -1,17 +1,51 @@
 @use "global" as *;
 
 .sidebar {
-    width: 37%;
-    box-sizing: border-box;
-    border: 1px solid chocolate;
-  }
+  width: 100%;
+}
 
-.sidebar__title p::before{
+.sidebar__inner {
+  padding-left: rem(25);
+  padding-right: rem(25);
+  @include mq("md") {
+    padding: 0;
+  }
+}
+
+.sidebar__title {
+  color: $green;
+  font-size: rem(24);
+  padding: rem(5) rem(20.2);
+  border-left: rem(8) solid $accent-green;
+}
+
+.sidebar__title p::before {
   content: "";
-  background-image: url("../image/common/whale.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 50px;
-  height: 50px;
+  mask: url("../images/common/whale.svg");
+  -webkit-mask: url("../images/common/whale.svg");
+  width: 40px;
+  height: 40px;
+  background-color: $green;
+  display: inline-block;
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  vertical-align: bottom;
+  margin-right: rem(13.4);
+}
+
+.sidebar__items {
+  margin-top: rem(24);
+}
+
+.sidebar__item:not(:first-child) {
+  margin-top: rem(40);
+}
+
+.sidebar__content:not(:first-child) {
+  margin-top: rem(80);
+}
+
+.sidebar__button {
+  margin-top: rem(40);
+  text-align: center;
 }

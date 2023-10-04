@@ -1,0 +1,125 @@
+@use "global" as *;
+
+.single-body {
+  position: relative;
+}
+
+.single-body__inner {
+  display: block;
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: 1fr 0.42fr;
+    gap: rem(80);
+  }
+}
+
+.single-body__inner::before {
+  content: "";
+  background-image: url("../images/common/fish2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  pointer-events: none;
+  max-width: rem(120);
+  width: 100%;
+  height: clamp(rem(55), 50%, rem(80));
+  left: calc(50% - min(45.9%, 18.6rem));
+  z-index: -1;
+  top: rem(-36.4);
+  @include mq("md") {
+    top: rem(-70.8);
+    max-width: rem(300);
+    width: clamp(rem(120), 50%, rem(300));
+    height: clamp(rem(55), 50%, rem(138));
+    left: calc(50% - min(48%, 38.7rem));
+  }
+}
+
+.single-body__contents {
+  color: $green;
+}
+
+.single-body__top {
+  border-bottom: 1px solid $accent-green;
+}
+
+.single-body__title h2 {
+  margin-top: rem(8);
+  font-size: rem(24);
+  font-weight: $medium;
+  line-height: 1.3;
+  @include mq("md") {
+    margin-top: rem(16);
+    line-height: 1;
+    font-size: rem(32);
+  }
+}
+
+.single-body__meta {
+  font-size: rem(14);
+}
+
+.single-body__image {
+  aspect-ratio: 345/231;
+  margin-top: rem(24);
+  @include mq("md") {
+    margin-top: rem(40);
+    aspect-ratio: 700/468;
+  }
+}
+
+.single-body__image img {
+  object-fit: cover;
+}
+
+.single-body__content {
+  p {
+    font-size: rem(16);
+    line-height: 1.5;
+    margin-top: rem(24);
+    @include mq("md") {
+      margin-top: rem(40);
+    }
+  }
+
+  ul {
+    margin-top: rem(24);
+    @include mq("md") {
+      margin-top: rem(40);
+    }
+  }
+
+  li {
+    line-height: 1.5;
+    margin-top: rem(4);
+  }
+
+  li::before {
+    content: "";
+    mask: url("../images/common/starfish.svg");
+    -webkit-mask: url("../images/common/starfish.svg");
+    width: 18px;
+    height: 18px;
+    background-color: $accent-green;
+    display: inline-block;
+    mask-size: cover;
+    -webkit-mask-size: cover;
+    vertical-align: sub;
+    margin-right: rem(9);
+  }
+}
+
+.single-body__sidebar {
+  margin-top: rem(80);
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
+
+.single-body__pagenavi {
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
