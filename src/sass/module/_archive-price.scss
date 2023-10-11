@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.archive-price {
+  position: relative;
+}
+
+.archive-price__inner::before {
+  content: "";
+  background-image: url("../images/common/fish2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  pointer-events: none;
+  max-width: rem(120);
+  width: 100%;
+  height: clamp(rem(55), 50%, rem(80));
+  left: calc(50% - min(45.9%, 18.6rem));
+  z-index: -1;
+  top: rem(-36.4);
+  @include mq("md") {
+    top: rem(-70.8);
+    max-width: rem(300);
+    width: clamp(rem(120), 50%, rem(300));
+    height: clamp(rem(55), 50%, rem(138));
+    left: calc(50% - min(48%, 38.7rem));
+  }
+}
+
+.archive-price__content {
+  @include mq("md") {
+    width: 100%;
+    max-width: rem(700);
+    margin: 0 auto;
+  }
+}
+
+.archive-price__list:not(:first-child) {
+  margin-top: rem(41.6);
+  @include mq("md") {
+    margin-top: rem(81.6);
+  }
+}

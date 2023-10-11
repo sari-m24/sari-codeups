@@ -45,8 +45,8 @@
 .wp-pagenavi a.previouspostslink::before {
   content: "";
   display: inline-block;
-  width: 13px;
-  height: 13px;
+  width: rem(13);
+  height: rem(13);
   border: 1px solid;
   border-color: transparent transparent $accent-green $accent-green;
   transform: rotate(45deg);
@@ -67,8 +67,8 @@
 .wp-pagenavi a.nextpostslink::before {
   content: "";
   display: inline-block;
-  width: 13px;
-  height: 13px;
+  width: rem(13);
+  height: rem(13);
   border: 1px solid;
   border-color: $accent-green $accent-green transparent transparent;
   transform: rotate(45deg);

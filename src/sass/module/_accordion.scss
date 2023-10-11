@@ -1,50 +1,66 @@
 @use "global" as *;
 
 .accordion {
-    width: 100%;
-  }
-  
-  .accordion__title {
-    position: relative;
-    font-size: 16px;
-    padding: 10px 20px;
-    cursor: pointer;
-    color: #fff;
-    background-color: $accent-green;
-  }
+  width: 100%;
+}
 
-  .accordion__title::before,
-  .accordion__title::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 21px;
-    width: 18px;
-    height: 2px;
-    background-color: #fff;
-    transition: 0.3s transform, 0.3s opacity;
+.accordion__item:not(:first-child) {
+  margin-top: rem(40);
+}
+
+.accordion__title {
+  position: relative;
+  font-size: rem(16);
+  padding: rem(16) rem(48) rem(12.8) rem(15.6);
+  cursor: pointer;
+  color: #fff;
+  font-weight: $normal;
+  background-color: $accent-green;
+  @include mq("md") {
+    font-size: rem(20);
+    padding: rem(26) rem(96) rem(22.8) rem(40);
   }
-  
-  .accordion__title::before {
-    transform: rotate(90deg);
+}
+
+.accordion__title::before,
+.accordion__title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: rem(16);
+  width: rem(28);
+  height: rem(1);
+  background-color: #fff;
+  transition: 0.3s transform, 0.3s opacity;
+  @include mq("md") {
+    right: rem(40);
+    width: rem(32);
   }
-  
-  .accordion__title.is-open::before {
-    transform: rotate(180deg);
-  }
-  
-  .accordion__title.is-open::after {
-    content: none;
-  }
-  
-  .accordion__content {
-    display: none;
-    padding: 10px 20px;
+}
+
+.accordion__title::before {
+  transform: rotate(90deg);
+}
+
+.accordion__title.is-open::before {
+  transform: rotate(180deg);
+}
+
+.accordion__title.is-open::after {
+  content: none;
+}
+
+.accordion__content {
+  display: none;
+  padding: rem(24) rem(16) rem(17);
+  color: $green;
+  border: 1px solid $accent-green;
+  @include mq("md") {
     margin-top: rem(16);
-    color: $green;
-    border: 1px solid $accent-green;
+    padding: rem(40) rem(40) rem(34.6) rem(40);
   }
-  
-  .accordion__text {
-    font-size: 12px;
-  }
+}
+
+.accordion__text {
+  font-size: rem(16);
+}

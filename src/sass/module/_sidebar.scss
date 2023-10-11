@@ -14,12 +14,16 @@
 
 .sidebar__title {
   color: $green;
-  font-size: rem(24);
   padding: rem(5) rem(20.2);
   border-left: rem(8) solid $accent-green;
 }
 
-.sidebar__title p::before {
+.sidebar__title h2 {
+  font-size: rem(24);
+  font-weight: $normal;
+}
+
+.sidebar__title h2::before {
   content: "";
   mask: url("../images/common/whale.svg");
   -webkit-mask: url("../images/common/whale.svg");

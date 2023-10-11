@@ -60,7 +60,7 @@
   font-size: rem(14);
 }
 
-.single-body__image {
+.single-body__mv {
   aspect-ratio: 345/231;
   margin-top: rem(24);
   @include mq("md") {
@@ -69,14 +69,32 @@
   }
 }
 
-.single-body__image img {
+.single-body__mv img {
   object-fit: cover;
 }
 
 .single-body__content {
+  margin-top: rem(24);
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+
+  img {
+    margin-top: rem(24);
+    aspect-ratio: 345/231;
+    object-fit: cover;
+    @include mq("md") {
+      margin-top: rem(40);
+      aspect-ratio: 700/468;
+    }
+  }
+
   p {
     font-size: rem(16);
     line-height: 1.5;
+  }
+
+  p:not(:first-child) {
     margin-top: rem(24);
     @include mq("md") {
       margin-top: rem(40);
@@ -93,6 +111,8 @@
   li {
     line-height: 1.5;
     margin-top: rem(4);
+    text-indent: rem(-26);
+    margin-left: rem(26);
   }
 
   li::before {
@@ -118,8 +138,70 @@
 }
 
 .single-body__pagenavi {
+  display: flex;
+  gap: rem(82);
+  justify-content: center;
   margin-top: rem(40);
   @include mq("md") {
     margin-top: rem(80);
   }
+}
+
+.single-body__pagenavi a {
+  position: relative;
+  justify-content: center;
+  color: $accent-green;
+  background-color: $white;
+  width: rem(38);
+  height: rem(38);
+  padding-top: rem(6);
+  padding-bottom: rem(6);
+  transition: 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  font-family: $second-font-family;
+  border: 1px solid $accent-green;
+  font-size: rem(16);
+  font-weight: $bold;
+}
+
+.single-body__pagenavi a:hover {
+  color: $white;
+  background-color: $accent-green;
+}
+
+.single-body__prev::before {
+  content: "";
+  display: inline-block;
+  width: rem(13);
+  height: rem(13);
+  border: 1px solid;
+  border-color: transparent transparent $accent-green $accent-green;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 34%;
+  left: 45%;
+  transition: 0.3s;
+}
+
+.single-body__next::before {
+  content: "";
+  display: inline-block;
+  width: rem(13);
+  height: rem(13);
+  border: 1px solid;
+  border-color: $accent-green $accent-green transparent transparent;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 34%;
+  left: 21%;
+  transition: 0.3s;
+}
+
+.single-body__next:hover::before {
+  border-color: $white $white transparent transparent;
+}
+
+.single-body__prev:hover::before {
+  border-color: transparent transparent $white $white;
 }

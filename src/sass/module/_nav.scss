@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.nav.nav--green {
+  color: $green;
+}
+
 .nav__wrapper:nth-child(2) {
   @include mq("md") {
     margin-left: rem(10);

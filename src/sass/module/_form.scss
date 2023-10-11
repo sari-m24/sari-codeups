@@ -1,0 +1,242 @@
+@use "global" as *;
+
+.form__item {
+  width: 100%;
+  border-bottom: 1px dashed $accent-green;
+  padding-bottom: rem(22.4);
+  @include mq("md") {
+    display: flex;
+    padding-bottom: rem(40);
+  }
+}
+
+.form__required {
+  background-color: #c94800;
+  color: $white;
+  font-size: rem(12);
+  line-height: 1;
+  font-weight: $normal;
+  display: inline-block;
+  padding: rem(6) rem(17.6) rem(4.4);
+  margin-left: rem(8);
+  vertical-align: top;
+}
+
+.form__item:not(:first-child) {
+  margin-top: rem(24);
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+.form__item dt {
+  color: $green;
+  font-size: rem(16);
+  font-weight: $bold;
+  @include mq("md") {
+    width: 30%;
+  }
+}
+
+.form__item dd {
+  margin-top: rem(12.16);
+  @include mq("md") {
+    margin-left: rem(12.8);
+    margin-top: 0;
+    width: 70%;
+  }
+}
+
+.form__item input[type="text"],
+.form__item input[type="email"],
+.form__item input[type="tel"],
+.form__item textarea {
+  border: 1px solid $accent-green;
+  width: 100%;
+  padding: rem(8) rem(16);
+
+  &::placeholder {
+    color: $green2;
+  }
+
+  @include mq("md") {
+    padding: rem(8) rem(16) rem(5);
+  }
+}
+
+.form__item textarea {
+  height: rem(200);
+}
+
+.form__checklist label {
+  display: block;
+  color: $green;
+  font-weight: normal;
+}
+
+.form__item select {
+  border: 1px solid $accent-green;
+  width: 100%;
+  padding: rem(7) rem(8) rem(4.4);
+  color: $green;
+  font-weight: $normal;
+  font-size: rem(12);
+}
+
+.form__item [type="checkbox"] {
+  display: none;
+
+  + span {
+    display: inline-block;
+    position: relative;
+    padding: 0 0 0 rem(22.2);
+    margin: rem(8) 0 0;
+    font-size: rem(16);
+    line-height: 1;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 40%;
+      left: 0;
+      transform: translateY(-50%);
+      background: $white;
+      border: 1px solid $accent-green;
+      width: rem(15);
+      height: rem(15);
+      display: block;
+    }
+
+    &::after {
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+  }
+
+  &:checked + span {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 43%;
+      left: 0;
+      display: block;
+      opacity: 1;
+      /*チェックマークじゃない場合は以下を変更する*/
+      transform: translateY(-50%) rotate(-45deg);
+      width: calc(rem(11) * 0.9);
+      height: calc(rem(10) * 0.5);
+      margin-top: -0.1em;
+      margin-left: 0.1em;
+      border-left: 2px solid #c94800;
+      border-bottom: 2px solid #c94800;
+    }
+  }
+}
+
+.form__selectlist {
+  position: relative;
+}
+
+.form__selectlist::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/common/triangle.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: rem(8.8);
+  height: rem(12);
+  transform: rotate(90deg);
+  right: rem(8.4);
+  top: rem(10.4);
+  z-index: -1;
+}
+
+.form__acceptance {
+  color: $green;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: rem(40);
+  max-width: rem(282);
+  width: 100%;
+  @include mq("md") {
+    margin-top: rem(80);
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+.form__acceptance [type="checkbox"] {
+  display: none;
+
+  + span {
+    display: inline-block;
+    position: relative;
+    padding: 0 0 0 rem(30);
+    font-size: rem(14);
+    line-height: calc(rem(22) / rem(14));
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 23%;
+      left: 0;
+      transform: translateY(-50%);
+      background: $white;
+      border: 1px solid $accent-green;
+      width: rem(22);
+      height: rem(22);
+      display: block;
+      @include mq("md") {
+        top: 50%;
+      }
+    }
+
+    &::after {
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+  }
+
+  &:checked + span {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 23%;
+      left: rem(4.3);
+      display: block;
+      opacity: 1;
+      /*チェックマークじゃない場合は以下を変更する*/
+      transform: translateY(-50%) rotate(-45deg);
+      width: calc(rem(11) * 0.9);
+      height: calc(rem(10) * 0.5);
+      margin-top: -0.1em;
+      margin-left: 0.1em;
+      border-left: 2px solid #c94800;
+      border-bottom: 2px solid #c94800;
+      @include mq("md") {
+        top: 53%;
+      }
+    }
+  }
+}
+
+.form__button {
+  margin-top: rem(24);
+  text-align: center;
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+.form__button div input[type="button"] {
+  color: $white;
+}
+
+.form__button div:hover input[type="button"] {
+  color: $accent-green;
+}

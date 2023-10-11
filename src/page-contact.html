@@ -87,13 +87,13 @@
               </a>
             </li>
             <li class="header__item">
-              <a href="archive-price.html" class="header__link header-link">
+              <a href="#" class="header__link header-link">
                 <div class="header-link__main">price</div>
                 <div class="header-link__sub">料金一覧</div>
               </a>
             </li>
             <li class="header__item">
-              <a href="archive-faq.html" class="header__link header-link">
+              <a href="#" class="header__link header-link">
                 <div class="header-link__main header-link__main--uppercase">
                   faq
                 </div>
@@ -169,23 +169,23 @@
               </ul>
               <ul class="nav__items">
                 <li class="nav__item">
-                  <a href="archive-price.html">料金一覧</a>
+                  <a href="#">料金一覧</a>
                 </li>
                 <li class="nav__item nav__item--no-icon">
-                  <a href="archive-price.html">ライセンス講習</a>
+                  <a href="#">ライセンス講習</a>
                 </li>
                 <li class="nav__item nav__item--no-icon">
-                  <a href="archive-price.html">体験ダイビング</a>
+                  <a href="#">体験ダイビング</a>
                 </li>
                 <li class="nav__item nav__item--no-icon">
-                  <a href="archive-price.html">ファンダイビング</a>
+                  <a href="#">ファンダイビング</a>
                 </li>
               </ul>
             </div>
             <div class="nav__wrapper">
               <ul class="nav__items">
                 <li class="nav__item">
-                  <a href="archive-faq.html">よくある質問</a>
+                  <a href="#">よくある質問</a>
                 </li>
               </ul>
               <ul class="nav__items">
@@ -210,10 +210,10 @@
     </header>
 
     <!-- 下層ページのメインビュー -->
-    <div class="sub-mv sub-mv--about-us">
+    <div class="sub-mv sub-mv--contact">
       <div class="sub-mv__inner">
         <div class="sub-mv__title">
-          <h1 class="sub-mv__title-text">about&nbsp;us</h1>
+          <h1 class="sub-mv__title-text">contact</h1>
         </div>
       </div>
     </div>
@@ -223,149 +223,121 @@
       <div class="breadcrumbs__inner inner">
         <span
           ><a href="index.html"><span>TOP</span></a></span
-        >&nbsp;&gt;&nbsp;<span><span>私たちについて</span></span>
+        >&nbsp;&gt;&nbsp;<span><span>お問い合わせ</span></span>
       </div>
     </div>
-    <!-- about message -->
-    <section class="archive-about-us layout-archive-about-us">
-      <div class="archive-about-us__inner inner">
-        <div class="archive-about-us__content-wrapper">
-          <div class="archive-about-us__img-left u-desktop">
-            <img
-              src="./assets/images/common/about-us-img1.webp"
-              alt="屋根にあるシーサーの写真"
-            />
-          </div>
-          <div class="archive-about-us__img-right">
-            <img
-              src="./assets/images/common/about-us-img2.webp"
-              alt="海で泳ぐ黄色の魚の写真"
-            />
-          </div>
-          <div class="archive-about-us__contents">
-            <div class="archive-about-us__message">
-              <h3 class="archive-about-us__message-main">
-                <span>d</span>ive&nbsp;into<br />the&nbsp;<span>o</span>cean
-              </h3>
-              <div class="archive-about-us__message-sub-wrapper">
-                <p class="archive-about-us__message-sub text text--white">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                </p>
+
+    <div class="page-contact layout-page-contact">
+      <div class="page-contact__inner inner">
+        <div class="page-contact__content form">
+          <form action="" method="POST" id="">
+            <dl class="form__item">
+              <dt>お名前<span class="form__required">必&nbsp;須</span></dt>
+              <dd>
+                <input
+                  type="text"
+                  name="お名前"
+                  value=""
+                  placeholder="沖縄&emsp;太郎"
+                />
+              </dd>
+            </dl>
+            <dl class="form__item">
+              <dt>
+                メールアドレス<span class="form__required">必&nbsp;須</span>
+              </dt>
+              <dd>
+                <input
+                  type="email"
+                  name="メールアドレス"
+                  value=""
+                  placeholder="aaa000@ggmail.com"
+                />
+              </dd>
+            </dl>
+            <dl class="form__item">
+              <dt>電話番号<span class="form__required">必&nbsp;須</span></dt>
+              <dd>
+                <input
+                  type="tel"
+                  name="電話番号"
+                  value=""
+                  placeholder="000-0000-0000"
+                />
+              </dd>
+            </dl>
+            <dl class="form__item">
+              <dt>
+                お問い合わせ項目<span class="form__required">必&nbsp;須</span>
+              </dt>
+              <dd class="form__checklist">
+                <label
+                  ><input
+                    type="checkbox"
+                    name="ダイビング講習について"
+                    value=""
+                    checked
+                  /><span>ダイビング講習について</span></label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="ファンダイビングについて"
+                    value=""
+                  /><span>ファンダイビングについて</span></label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="体験ダイビングについて"
+                    value=""
+                  /><span>体験ダイビングについて</span></label
+                >
+              </dd>
+            </dl>
+            <dl class="form__item">
+              <dt>キャンペーン</dt>
+              <dd class="form__selectlist">
+                <select name="キャンペーン">
+                  <option value="キャンペーン内容を選択">
+                    キャンペーン内容を選択
+                  </option>
+                  <option value="ナイトダイビング">ナイトダイビング</option>
+                  <option value="貸切体験ダイビング">貸切体験ダイビング</option>
+                </select>
+              </dd>
+            </dl>
+            <dl class="form__item">
+              <dt>
+                お問い合わせ内容<span class="form__required">必&nbsp;須</span>
+              </dt>
+              <dd>
+                <textarea name="contents"></textarea>
+              </dd>
+            </dl>
+            <div class="form__acceptance">
+              <label
+                ><input
+                  type="checkbox"
+                  name="acceptance"
+                  value="個人情報の取り扱いについて同意のうえ送信します。"
+                /><span
+                  >個人情報の取り扱いについて同意のうえ送信します。</span
+                ></label
+              >
+            </div>
+            <div class="form__button">
+              <div class="button button--padding">
+                <span><input type="button" value="Send" /></span>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="archive-about-us__illust">
-          <img
-            src="./assets/images/common/fish3.webp"
-            alt="キンギョハナダイのイラスト"
-          />
+          </form>
         </div>
       </div>
-    </section>
-    <!-- gallery -->
-    <section class="gallery layout-gallery">
-      <div class="gallery__inner inner">
-        <div class="gallery__section-title section-title">
-          <p class="section-title__main">gallery</p>
-          <h2 class="section-title__sub">フォト</h2>
-        </div>
-        <div class="gallery__content">
-          <div class="gallery__image js-modal">
-            <img
-              src="./assets/images/common/price.webp"
-              alt="サンゴ礁の中を赤い魚の群れが泳ぐ様子"
-            />
-          </div>
-          <div class="gallery__image js-modal">
-            <img
-              src="./assets/images/common/campaign-card2.webp"
-              alt="島の間の静かな海の上に船が2隻停まっている様子"
-            />
-          </div>
-          <div class="gallery__image js-modal">
-            <img
-              src="./assets/images/common/gallery-img3.webp"
-              alt="白色の尾が黄色の魚"
-            />
-          </div>
-          <div class="gallery__image js-modal">
-            <img
-              src="./assets/images/common/gallery-img4.webp"
-              alt="黄色い魚"
-            />
-          </div>
-          <div class="gallery__image js-modal">
-            <img
-              src="./assets/images/common/gallery-img5.webp"
-              alt="銀色の魚の群れ"
-            />
-          </div>
-          <div class="gallery__image js-modal">
-            <img
-              src="./assets/images/common/gallery-img6.webp"
-              alt="黄色い魚がサンゴ礁の横を泳ぐ様子"
-            />
-          </div>
-        </div>
-        <div class="gallery__modal">
-          <div class="gallery__modal-content"></div>
-        </div>
-      </div>
-    </section>
-    <!-- contact -->
-    <section class="contact layout-sub-contact layout-sub-contact--about">
-      <div class="contact__inner inner">
-        <div class="contact__illust">
-          <img
-            src="./assets/images/common/fish3.webp"
-            alt="キンギョハナダイのイラスト"
-          />
-        </div>
-        <div class="contact__contents">
-          <div class="contact__store-info">
-            <a href="index.html" class="contact__logo">
-              <img
-                src="./assets/images/common/contact-logo.svg"
-                alt="CodeUps"
-              />
-            </a>
-            <div class="contact__address-wrapper">
-              <address class="contact__address">
-                沖縄県那覇市1-1<br />TEL:0120-000-0000<br />営業時間:8:30-19:00<br />定休日:毎週火曜日
-              </address>
-              <div class="contact__map">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28635.982459379786!2d127.66184162995282!3d26.213009876403387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zT2tpbmF3YSwgMS0xIOmCo-imh-W4giDmspbnuITnnIw!5e0!3m2!1sja!2sjp!4v1689455322999!5m2!1sja!2sjp"
-                  width="600"
-                  height="450"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-          <div class="contact__button-wrapper">
-            <div
-              class="contact__section-title section-title section-title--large"
-            >
-              <p class="section-title__main">contact</p>
-              <h2 class="section-title__sub">お問い合わせ</h2>
-            </div>
-            <p class="contact__text">ご予約・お問い合わせはコチラ</p>
-            <div class="contact__button">
-              <a href="#" class="button"><span>contact&nbsp;us</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
 
     <!-- フッター -->
-    <footer class="footer layout-footer">
+    <footer class="footer layout-footer layout-footer--contact">
       <div class="footer__inner inner">
         <div class="footer__wrapper">
           <a href="index.html" class="footer__logo"
@@ -435,23 +407,23 @@
             </ul>
             <ul class="nav__items">
               <li class="nav__item">
-                <a href="archive-price.html">料金一覧</a>
+                <a href="#">料金一覧</a>
               </li>
               <li class="nav__item nav__item--no-icon">
-                <a href="archive-price.html">ライセンス講習</a>
+                <a href="#">ライセンス講習</a>
               </li>
               <li class="nav__item nav__item--no-icon">
-                <a href="archive-price.html">体験ダイビング</a>
+                <a href="#">体験ダイビング</a>
               </li>
               <li class="nav__item nav__item--no-icon">
-                <a href="archive-price.html">ファンダイビング</a>
+                <a href="#">ファンダイビング</a>
               </li>
             </ul>
           </div>
           <div class="nav__wrapper">
             <ul class="nav__items">
               <li class="nav__item">
-                <a href="archive-faq.html">よくある質問</a>
+                <a href="#">よくある質問</a>
               </li>
             </ul>
             <ul class="nav__items">

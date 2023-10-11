@@ -85,3 +85,18 @@
     background-image: url("../images/common/voice-sub-mv.webp");
   }
 }
+
+.sub-mv.sub-mv--faq {
+  text-transform: uppercase;
+  background-image: url("../images/common/faq-sub-mv-sp.webp");
+  @include mq("md") {
+    background-image: url("../images/common/faq-sub-mv.webp");
+  }
+}
+
+.sub-mv.sub-mv--contact {
+  background-image: url("../images/common/contact-sub-mv-sp.webp");
+  @include mq("md") {
+    background-image: url("../images/common/contact-sub-mv.webp");
+  }
+}

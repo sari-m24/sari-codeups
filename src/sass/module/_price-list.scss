@@ -1,49 +1,157 @@
 @use "global" as *;
 
 .price-list__title {
-    font-size: rem(16);
-    line-height: 1.5;
-    padding-bottom: rem(1);
-    color: $green;
-    border-bottom: 1px solid $accent-green;
-    font-weight: $bold;
-    @include mq("md") {
-        padding-bottom: rem(4);
-    }
+  font-size: rem(16);
+  line-height: 1.5;
+  padding-bottom: rem(1);
+  color: $green;
+  border-bottom: 1px solid $accent-green;
+  font-weight: $bold;
+  @include mq("md") {
+    padding-bottom: rem(4);
+  }
 }
 
 .price-list__body {
-    margin-top: rem(11);
-    @include mq("md") {
-        margin-top: rem(8);
-    }
+  margin-top: rem(11);
+  @include mq("md") {
+    margin-top: rem(8);
+  }
 }
 
 .price-list__content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .price-list__content-wrapper + .price-list__content-wrapper {
-    margin-top: rem(11);
-    @include mq("md") {
-        margin-top: rem(8);
-    }
+  margin-top: rem(11);
+  @include mq("md") {
+    margin-top: rem(8);
+  }
 }
 
 .price-list__content,
 .price-list__price {
-    font-size: rem(14);
-    line-height: 1.5;
-    font-weight: $normal;
-    color: $green;
-    @include mq("md") {
-        font-size: rem(16);
-    }
+  font-size: rem(14);
+  line-height: 1.5;
+  font-weight: $normal;
+  color: $green;
+  font-family: "Noto Sans JP", sans-serif;
+  @include mq("md") {
+    font-size: rem(16);
+  }
 }
 
 .price-list__price {
-    font-family: "Noto Sans JP", sans-serif;
-    margin-left: rem(30);
+  margin-left: rem(30);
+}
+
+.price-list__title-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  color: $white;
+  justify-content: center;
+  align-items: center;
+  background-color: $accent-green;
+  padding-top: rem(8);
+  padding-bottom: rem(4);
+  @include mq("md") {
+    padding: 0;
+    border-right: 1px solid $accent-green;
+    width: 40%;
+    flex-direction: column;
+  }
+}
+
+.price-list.price-list--border {
+  border-top: 1px solid $accent-green;
+  border-left: 1px solid $accent-green;
+  border-right: 1px solid $accent-green;
+  @include mq("md") {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid $accent-green;
+  }
+}
+
+.price-list.price-list--border .price-list__title {
+  color: $white;
+  border: none;
+  padding: 0;
+  @include mq("md") {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: rem(8);
+  }
+}
+
+.price-list.price-list--border .price-list__title::before {
+  content: "";
+  mask: url("../images/common/whale.svg");
+  -webkit-mask: url("../images/common/whale.svg");
+  width: rem(24);
+  height: rem(24);
+  background-color: $white;
+  display: inline-block;
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  margin-right: rem(8);
+  vertical-align: text-top;
+  @include mq("md") {
+    width: rem(64);
+    height: rem(64);
+    margin-right: rem(0);
+  }
+}
+
+.price-list.price-list--border .price-list__body {
+  margin-top: 0;
+  text-align: center;
+  @include mq("md") {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.price-list.price-list--border .price-list__title h3 {
+  font-size: rem(16);
+}
+
+.price-list.price-list--border .price-list__content-wrapper {
+  border-bottom: 1px solid $accent-green;
+}
+
+.price-list.price-list--border .price-list__content-wrapper:last-of-type {
+  @include mq("md") {
+    border-bottom: none;
+  }
+}
+
+.price-list.price-list--border .price-list__content-wrapper:not(:first-child) {
+  margin-top: 0;
+}
+
+.price-list.price-list--border .price-list__content {
+  width: 76%;
+  padding: rem(5) rem(15);
+  font-size: rem(16);
+  @include mq("md") {
+    width: 69%;
+    padding: rem(16.8) rem(15);
+  }
+}
+
+.price-list.price-list--border .price-list__price {
+  margin-left: 0;
+  width: 33.2%;
+  text-align: right;
+  font-size: rem(16);
+  padding: rem(17.6) rem(15);
+  border-left: 1px solid $accent-green;
+  @include mq("md") {
+    padding: rem(16.8) rem(15);
+  }
 }

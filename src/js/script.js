@@ -163,6 +163,7 @@ $(function () {
   });
 });
 
+// アーカイブトグル
 $(".js-toggle").on("click", function () {
   $(this).next().slideToggle();
   $(this).toggleClass("is-active");
