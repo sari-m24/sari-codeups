@@ -12,5 +12,15 @@
 }
 
 .layout-footer.layout-footer--contact {
-  margin-top: rem(160);
+  margin-top: rem(136);
+  @include mq("md") {
+    margin-top: rem(115.2);
+  }
+}
+
+.layout-footer.layout-footer--404 {
+  margin-top: 0;
+  @include mq("md") {
+    margin-top: rem(50);
+  }
 }

@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrap.wrap--bg-green {
+  background-color: $accent-green;
+}

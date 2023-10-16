@@ -8,14 +8,14 @@
 .button::after {
   content: "";
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: rem(4);
+  left: rem(4);
   width: 100%;
   height: 100%;
   border: 1px solid $accent-green;
 }
 
-.button span {
+.button span.animation {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -31,11 +31,11 @@
   z-index: 1;
 }
 
-.button span::first-letter {
+.button span.animation::first-letter {
   text-transform: capitalize;
 }
 
-.button span::before {
+.button span.animation::before {
   content: "";
   position: absolute;
   left: 0;
@@ -48,15 +48,15 @@
   z-index: -1;
 }
 
-.button span:hover::before {
+.button:hover span.animation::before {
   transform: translateX(0);
 }
 
-.button span:hover {
+.button:hover span.animation {
   color: $accent-green;
 }
 
-.button span::after {
+.button span.animation::after {
   content: "";
   position: absolute;
   width: rem(40);
@@ -70,14 +70,50 @@
   background-size: contain;
 }
 
-.button span:hover::after {
+.button:hover span.animation::after {
   background-image: url("../images/common/arrow-green.png");
 }
 
-.button.button--padding span {
-  padding: rem(16) rem(107.2) rem(12.8) rem(46.4);
+.button.button--padding span.animation {
+  padding: rem(19.2) rem(108.4) rem(12.8) rem(54.8);
 }
 
-.button.button.button--padding span::after {
+.button.button--padding span.animation::after {
   right: rem(37.4);
+}
+
+.button.button--white::after {
+  border: 1px solid $white;
+}
+
+.button.button--white span {
+  color: $accent-green;
+  background-color: $white;
+  border: 1px solid $white;
+}
+
+.button.button--white span.animation::before {
+  background-color: $accent-green;
+}
+
+.button.button--white:hover span.animation {
+  color: $white;
+}
+
+.button.button--white span.animation::after {
+  background-image: url("../images/common/arrow-green.png");
+}
+
+.button.button--white:hover span.animation::after {
+  background-image: url("../images/common/arrow.png");
+}
+
+.button.button--white span.uppercase {
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.button.button--white:hover span.uppercase {
+  color: white;
 }

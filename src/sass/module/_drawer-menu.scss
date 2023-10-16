@@ -1,25 +1,25 @@
 @use "global" as *;
 
 .drawer-menu__addClass {
-    display: flex;
-    width: 100vw;
-    height: inherit;
-    overflow: scroll;
-    padding: rem(20) 0 rem(100);
+  display: flex;
+  width: 100vw;
+  height: inherit;
+  overflow: scroll;
+  padding: rem(20) 0 rem(100);
 }
 
 .drawer-menu__inner {
-    min-height: rem(520);
-    width: 100%;
-    max-width: rem(400);
-    margin: 0 auto;
-    padding-left: rem(15);
-    padding-right: rem(15);
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: rem(250) rem(250);
-    column-gap: rem(10);
-    row-gap: rem(20);
-    margin-top: rem(24);
+  min-height: rem(600);
+  width: 100%;
+  max-width: rem(400);
+  margin: 0 auto;
+  padding-left: rem(15);
+  padding-right: rem(15);
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.4fr 1fr;
+  column-gap: rem(10);
+  row-gap: rem(20);
+  margin-top: rem(24);
 }

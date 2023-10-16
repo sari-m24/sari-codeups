@@ -44,6 +44,10 @@
   text-transform: uppercase;
 }
 
+.sub-mv__title-text span {
+  text-transform: uppercase;
+}
+
 .sub-mv.sub-mv--about-us {
   background-image: url("../images/common/aboutus-sub-mv-sp.webp");
   @include mq("md") {
@@ -99,4 +103,15 @@
   @include mq("md") {
     background-image: url("../images/common/contact-sub-mv.webp");
   }
+}
+
+.sub-mv.sub-mv--others {
+  background-image: url("../images/common/others-sub-mv-sp.webp");
+  @include mq("md") {
+    background-image: url("../images/common/others-sub-mv.webp");
+  }
+}
+
+.sub-mv.sub-mv--others .sub-mv__title-text {
+  text-transform: capitalize;
 }

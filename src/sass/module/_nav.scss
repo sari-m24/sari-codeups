@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.nav.nav--green {
-  color: $green;
-}
-
 .nav__wrapper:nth-child(2) {
   @include mq("md") {
     margin-left: rem(10);
@@ -81,10 +77,11 @@
   position: relative;
   top: rem(4);
   left: rem(-4);
-  background-image: url("../images/common/starfish.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  mask: url("../images/common/starfish.svg");
+  -webkit-mask: url("../images/common/starfish.svg");
+  background-color: $white;
+  mask-size: cover;
+  -webkit-mask-size: cover;
 }
 
 .nav__item.nav__item--no-icon {
@@ -92,5 +89,27 @@
 }
 
 .nav__item.nav__item--no-icon a::before {
-  background-image: none;
+  mask: none;
+  background-color: transparent;
+}
+
+.nav.nav--green .nav__item a {
+  color: $green;
+}
+
+.nav.nav--green .nav__item a::before {
+  content: "";
+  mask: url("../images/common/starfish.svg");
+  -webkit-mask: url("../images/common/starfish.svg");
+  width: rem(18);
+  height: rem(18);
+  background-color: $green;
+  display: inline-block;
+  mask-size: cover;
+  -webkit-mask-size: cover;
+}
+
+.nav.nav--green .nav__item.nav__item--no-icon a::before {
+  mask: none;
+  background-color: transparent;
 }
