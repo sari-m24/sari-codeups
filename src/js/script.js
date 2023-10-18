@@ -145,19 +145,19 @@ $(function () {
     var index = $(".js-tab-button").index(this);
     $(".js-tab-button").removeClass("current");
     $(this).addClass("current");
-    $(".tab .tab__content.show").removeClass("show");
-    $(".tab .tab__content").eq(index).addClass("show");
+    $(".js-tab-content.show").removeClass("show");
+    $(".js-tab-content").eq(index).addClass("show");
   });
 });
 
 // アコーディオン
 $(function () {
-  $(".js-accordion__item:first-child .js-accordion__content").css(
+  $(".js-accordion-item:first-child .js-accordion-content").css(
     "display",
     "block"
   );
-  $(".js-accordion__item:first-child .js-accordion__title").addClass("is-open"); // 一行目のみ開いているようにする処理
-  $(".js-accordion__title").on("click", function () {
+  $(".js-accordion-item:first-child .js-accordion-title").addClass("is-open"); // 一行目のみ開いているようにする処理
+  $(".js-accordion-title").on("click", function () {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
   });
@@ -170,17 +170,17 @@ $(".js-toggle").on("click", function () {
 });
 
 //モーダル
-$(".js-modal").click(function () {
+$(".js-modal-img").click(function () {
   // クリックした画像のHTML要素を取得して、置き換える
-  $(".gallery__modal-content").html($(this).prop("outerHTML"));
+  $(".js-modal-content").html($(this).prop("outerHTML"));
 
-  $(".gallery__modal").fadeIn(200);
+  $(".js-modal").fadeIn(200);
   return false;
 });
 
-$(".gallery__modal").click(function () {
+$(".js-modal").click(function () {
   // 非表示にする
-  $(".gallery__modal").fadeOut(200);
+  $(".js-modal").fadeOut(200);
   return false;
 });
 

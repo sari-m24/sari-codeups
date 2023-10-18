@@ -91,7 +91,7 @@
 
 .tab__content.show {
   display: block;
-  animation: fade 0.5s ease;
+  button__animation: fade 0.5s ease;
 }
 
 @keyframes fade {

@@ -55,21 +55,9 @@
 }
 
 .footer__nav {
-  display: grid;
-  justify-content: center;
-  grid-auto-flow: column;
-  grid-template-columns: rem(170) rem(170);
-  grid-template-rows: 0.8fr 1fr;
-  column-gap: rem(7.6);
-  row-gap: rem(13);
   margin-top: rem(25.4);
-
   @include mq("md") {
-    grid-auto-flow: row;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
     margin-top: rem(12);
-    column-gap: rem(22);
   }
 }
 

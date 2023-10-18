@@ -15,12 +15,12 @@
   border: 1px solid $accent-green;
 }
 
-.button span.animation {
+.button__animation {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
-  padding: rem(16) rem(88) rem(16) rem(40);
+  padding: rem(16) rem(89.6) rem(14.4) rem(36.8);
   font-size: rem(14);
   border: 1px solid $accent-green;
   color: $white;
@@ -31,11 +31,11 @@
   z-index: 1;
 }
 
-.button span.animation::first-letter {
+.button__animation::first-letter {
   text-transform: capitalize;
 }
 
-.button span.animation::before {
+.button__animation::before {
   content: "";
   position: absolute;
   left: 0;
@@ -48,21 +48,21 @@
   z-index: -1;
 }
 
-.button:hover span.animation::before {
+.button:hover .button__animation::before {
   transform: translateX(0);
 }
 
-.button:hover span.animation {
+.button:hover .button__animation {
   color: $accent-green;
 }
 
-.button span.animation::after {
+.button__animation::after {
   content: "";
   position: absolute;
   width: rem(40);
   height: rem(8);
   top: 41%;
-  right: rem(23);
+  right: rem(19.8);
   transform: translate(-50%);
   background-image: url("../images/common/arrow.png");
   background-repeat: no-repeat;
@@ -70,16 +70,31 @@
   background-size: contain;
 }
 
-.button:hover span.animation::after {
+.button:hover .button__animation::after,
+.button.button--padding:hover .button__animation::after {
   background-image: url("../images/common/arrow-green.png");
 }
 
-.button.button--padding span.animation {
-  padding: rem(19.2) rem(108.4) rem(12.8) rem(54.8);
+.button.button.button--padding .button__animation {
+  padding: rem(17.6) rem(112) rem(14.4) rem(52.2);
 }
 
-.button.button--padding span.animation::after {
+.button.button.button--padding .button__animation::after {
+  right: rem(35.8);
+  top: 37.8%;
+}
+
+.button.button--padding input {
+  padding: 0;
+  color: $white;
+}
+
+.button.button--padding input::after {
   right: rem(37.4);
+}
+
+.button.button--padding input:hover {
+  color: $accent-green;
 }
 
 .button.button--white::after {
@@ -92,28 +107,32 @@
   border: 1px solid $white;
 }
 
-.button.button--white span.animation::before {
+.button.button--white .button__animation {
+  padding: rem(16) rem(96) rem(14.4) rem(36.8);
+}
+
+.button.button--white .button__animation::before {
   background-color: $accent-green;
 }
 
-.button.button--white:hover span.animation {
+.button.button--white:hover .button__animation {
   color: $white;
 }
 
-.button.button--white span.animation::after {
+.button.button--white .button__animation::after {
   background-image: url("../images/common/arrow-green.png");
 }
 
-.button.button--white:hover span.animation::after {
+.button.button--white:hover .button__animation::after {
   background-image: url("../images/common/arrow.png");
 }
 
-.button.button--white span.uppercase {
+.button.button--white .button__uppercase {
   text-transform: uppercase;
   background-color: transparent;
   border: 1px solid transparent;
 }
 
-.button.button--white:hover span.uppercase {
+.button.button--white:hover .button__uppercase {
   color: white;
 }

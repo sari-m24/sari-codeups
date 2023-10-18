@@ -1,5 +1,22 @@
 @use "global" as *;
 
+.nav {
+  display: grid;
+  justify-content: center;
+  grid-auto-flow: column;
+  grid-template-columns: rem(170) rem(170);
+  grid-template-rows: 0.4fr 1fr;
+  column-gap: rem(7.6);
+  row-gap: rem(13);
+
+  @include mq("md") {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: rem(22);
+  }
+}
+
 .nav__wrapper:nth-child(2) {
   @include mq("md") {
     margin-left: rem(10);
@@ -91,6 +108,12 @@
 .nav__item.nav__item--no-icon a::before {
   mask: none;
   background-color: transparent;
+}
+
+.nav.nav--green {
+  @include mq("md") {
+    column-gap: clamp(rem(22), -5.482rem + 14.29vw, rem(116));
+  }
 }
 
 .nav.nav--green .nav__item a {

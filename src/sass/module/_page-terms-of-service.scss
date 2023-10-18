@@ -1,0 +1,70 @@
+@use "global" as *;
+
+.page-terms-of-service {
+  position: relative;
+}
+
+.page-terms-of-service__inner::before {
+  content: "";
+  background-image: url("../images/common/fish2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  pointer-events: none;
+  max-width: rem(120);
+  width: 100%;
+  height: clamp(rem(55), 50%, rem(80));
+  left: calc(50% - min(45.9%, 18.6rem));
+  z-index: -1;
+  top: rem(-36.6);
+  @include mq("md") {
+    top: rem(-70);
+    max-width: rem(300);
+    width: clamp(rem(120), 50%, rem(300));
+    height: clamp(rem(135), 50%, rem(138));
+    left: calc(50% - min(48%, 38.7rem));
+  }
+}
+
+.page-terms-of-service__contents {
+  width: 100%;
+  max-width: rem(800);
+  margin: 0 auto;
+  color: $green;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.page-terms-of-service__title {
+  font-size: rem(24);
+  font-weight: $medium;
+  @include mq("md") {
+    font-size: rem(32);
+  }
+}
+
+.page-terms-of-service__content {
+  margin-top: rem(40);
+  line-height: 2;
+}
+
+.page-terms-of-service__content p:not(:first-child) {
+  margin-top: rem(31.2);
+}
+
+.page-terms-of-service__content ol {
+  list-style: decimal;
+  margin-left: rem(22.8);
+}
+
+.page-terms-of-service__content ol:first-of-type {
+  margin-top: rem(32);
+}
+
+.page-terms-of-service__content p:nth-of-type(2) {
+  margin-top: 0;
+}
+
+.page-terms-of-service__content ol:nth-of-type(2) {
+  margin-top: rem(31.2);
+}

@@ -1,5 +1,16 @@
 @use "global" as *;
 
+.page-404 {
+  background-image: url("../images/common/bg-whale.png");
+  background-position: center rem(-25);
+  background-repeat: no-repeat;
+  background-size: rem(345) rem(345);
+  @include mq("md") {
+    background-position: 6%;
+    background-size: rem(698) rem(698);
+  }
+}
+
 .page-404__message {
   color: $white;
   text-align: center;
@@ -11,6 +22,7 @@
   letter-spacing: 0.5em;
   text-indent: rem(36.8);
   line-height: 1;
+  font-weight: $normal;
 
   @include mq("md") {
     font-size: rem(160);

@@ -7,9 +7,6 @@
   padding: rem(16) rem(16) rem(18);
   box-shadow: rem(2) rem(2) rem(10) 0 rgba($color: #000000, $alpha: 0.25);
   transition: transform 0.5s ease;
-  @include mq("md") {
-    padding: rem(16);
-  }
 }
 
 .blog-card:hover img {

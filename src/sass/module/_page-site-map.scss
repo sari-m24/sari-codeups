@@ -26,20 +26,3 @@
     left: calc(50% - min(48%, 38.7rem));
   }
 }
-
-.page-site-map__menu {
-  display: grid;
-  justify-content: center;
-  grid-auto-flow: column;
-  grid-template-columns: rem(170) rem(170);
-  grid-template-rows: 0.8fr 1fr;
-  column-gap: rem(7.6);
-  row-gap: rem(13);
-
-  @include mq("md") {
-    grid-auto-flow: row;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    column-gap: clamp(rem(22), -5.482rem + 14.29vw, rem(116));
-  }
-}

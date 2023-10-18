@@ -118,7 +118,7 @@
       <!-- ドロワーメニュー -->
       <div class="header__drawer-menu drawer-menu js-drawer">
         <div class="drawer-menu__addClass">
-          <div class="drawer-menu__inner nav">
+          <div class="drawer-menu__nav nav">
             <div class="nav__wrapper">
               <ul class="nav__items">
                 <li class="nav__item">
@@ -202,7 +202,7 @@
               </ul>
               <ul class="nav__items">
                 <li class="nav__item">
-                  <a href="#">利用規約</a>
+                  <a href="page-terms-of-service.html">利用規約</a>
                 </li>
               </ul>
               <ul class="nav__items">
@@ -236,45 +236,52 @@
 
     <div class="page-contact layout-page-contact">
       <div class="page-contact__inner inner">
-        <div class="page-contact__content form">
-          <form action="" method="POST" id="">
+        <div class="page-contact__content">
+          <form action="" method="POST" id="" class="form">
             <dl class="form__item">
-              <dt>お名前<span class="form__required">必&nbsp;須</span></dt>
-              <dd>
+              <dt class="form__label">
+                お名前<span class="form__required">必&nbsp;須</span>
+              </dt>
+              <dd class="form__input">
                 <input
                   type="text"
                   name="お名前"
                   value=""
+                  class="form__input-text"
                   placeholder="沖縄&emsp;太郎"
                 />
               </dd>
             </dl>
             <dl class="form__item">
-              <dt>
+              <dt class="form__label">
                 メールアドレス<span class="form__required">必&nbsp;須</span>
               </dt>
-              <dd>
+              <dd class="form__input">
                 <input
                   type="email"
                   name="メールアドレス"
                   value=""
+                  class="form__input-text"
                   placeholder="aaa000@ggmail.com"
                 />
               </dd>
             </dl>
             <dl class="form__item">
-              <dt>電話番号<span class="form__required">必&nbsp;須</span></dt>
-              <dd>
+              <dt class="form__label">
+                電話番号<span class="form__required">必&nbsp;須</span>
+              </dt>
+              <dd class="form__input">
                 <input
                   type="tel"
                   name="電話番号"
                   value=""
+                  class="form__input-text"
                   placeholder="000-0000-0000"
                 />
               </dd>
             </dl>
             <dl class="form__item">
-              <dt>
+              <dt class="form__label">
                 お問い合わせ項目<span class="form__required">必&nbsp;須</span>
               </dt>
               <dd class="form__checklist">
@@ -283,6 +290,7 @@
                     type="checkbox"
                     name="ダイビング講習について"
                     value=""
+                    class="form__checkbox"
                     checked
                   /><span>ダイビング講習について</span></label
                 >
@@ -291,6 +299,7 @@
                     type="checkbox"
                     name="ファンダイビングについて"
                     value=""
+                    class="form__checkbox"
                   /><span>ファンダイビングについて</span></label
                 >
                 <label
@@ -298,13 +307,14 @@
                     type="checkbox"
                     name="体験ダイビングについて"
                     value=""
+                    class="form__checkbox"
                   /><span>体験ダイビングについて</span></label
                 >
               </dd>
             </dl>
             <dl class="form__item">
-              <dt>キャンペーン</dt>
-              <dd class="form__selectlist">
+              <dt class="form__label">キャンペーン</dt>
+              <dd class="form__select-list">
                 <select name="キャンペーン">
                   <option value="キャンペーン内容を選択">
                     キャンペーン内容を選択
@@ -315,11 +325,11 @@
               </dd>
             </dl>
             <dl class="form__item">
-              <dt>
+              <dt class="form__label">
                 お問い合わせ内容<span class="form__required">必&nbsp;須</span>
               </dt>
-              <dd>
-                <textarea name="contents"></textarea>
+              <dd class="form__input">
+                <textarea name="contents" class="form__textarea"></textarea>
               </dd>
             </dl>
             <div class="form__acceptance">
@@ -328,15 +338,18 @@
                   type="checkbox"
                   name="acceptance"
                   value="個人情報の取り扱いについて同意のうえ送信します。"
+                  class="form__acceptance-box"
                 /><span
                   >個人情報の取り扱いについて同意のうえ送信します。</span
                 ></label
               >
             </div>
             <div class="form__button">
-              <button class="button button--padding" type="submit">
-                <span class="animation">send</span>
-              </button>
+              <label class="button button--padding">
+                <span class="button__animation"
+                  ><input type="submit" value="Send"
+                /></span>
+              </label>
             </div>
           </form>
         </div>
@@ -447,7 +460,7 @@
             </ul>
             <ul class="nav__items">
               <li class="nav__item">
-                <a href="#">利用規約</a>
+                <a href="page-terms-of-service.html">利用規約</a>
               </li>
             </ul>
             <ul class="nav__items">

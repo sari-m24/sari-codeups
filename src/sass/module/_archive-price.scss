@@ -35,7 +35,7 @@
   }
 }
 
-.archive-price__list:not(:first-child) {
+.archive-price__table:not(:first-child) {
   margin-top: rem(41.6);
   @include mq("md") {
     margin-top: rem(81.6);

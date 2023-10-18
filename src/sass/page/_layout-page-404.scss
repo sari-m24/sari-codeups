@@ -6,16 +6,9 @@
   padding-right: rem(25);
   padding-bottom: rem(42.8);
   max-width: rem(1130);
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url("../images/common/bg-whale.png");
-  background-position: center rem(-25);
-  background-repeat: no-repeat;
-  background-size: rem(345) rem(345);
+  margin: 0 auto;
   @include mq("md") {
     padding-top: rem(120.6);
     padding-bottom: rem(101);
-    background-position: 6%;
-    background-size: rem(698) rem(698);
   }
 }
