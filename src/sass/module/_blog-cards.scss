@@ -17,7 +17,7 @@
   row-gap: rem(40.4);
   @include mq("md") {
     grid-template-columns: repeat(2, 1fr);
-    row-gap: rem(78.4);
+    row-gap: rem(83.2);
   }
 }
 
