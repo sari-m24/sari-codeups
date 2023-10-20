@@ -141,13 +141,33 @@ jQuery(function ($) {
 
 // タブ
 $(function () {
+  // タブボタンがクリックされた時の処理
   $(".js-tab-button").on("click", function () {
     var index = $(".js-tab-button").index(this);
-    $(".js-tab-button").removeClass("current");
-    $(this).addClass("current");
-    $(".js-tab-content.show").removeClass("show");
-    $(".js-tab-content").eq(index).addClass("show");
+    switchTab(index);
   });
+
+  // タブ切り替え処理
+  function switchTab(tabIndex) {
+    $(".js-tab-button").removeClass("current");
+    $(".js-tab-button").eq(tabIndex).addClass("current");
+    $(".js-tab-content.show").removeClass("show");
+    $(".js-tab-content").eq(tabIndex).addClass("show");
+  }
+
+  // URLのハッシュを確認して対応するタブをアクティブにする
+  var hash = window.location.hash;
+  switch (hash) {
+    case "#tab1":
+      switchTab(0);
+      break;
+    case "#tab2":
+      switchTab(1);
+      break;
+    case "#tab3":
+      switchTab(2);
+      break;
+  }
 });
 
 // アコーディオン
