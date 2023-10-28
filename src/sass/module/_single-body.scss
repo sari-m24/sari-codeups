@@ -71,6 +71,8 @@
 
 .single-body__mv img {
   object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .single-body__content {
@@ -82,6 +84,8 @@
   img {
     margin-top: rem(24);
     aspect-ratio: 345/231;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     @include mq("md") {
       margin-top: rem(40);

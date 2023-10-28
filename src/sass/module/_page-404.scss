@@ -5,9 +5,16 @@
   background-position: center rem(-25);
   background-repeat: no-repeat;
   background-size: rem(345) rem(345);
+  padding-top: rem(48);
+  padding-bottom: rem(40);
+  margin-left: auto;
+  margin-left: auto;
+  max-width: rem(1130);
   @include mq("md") {
     background-position: 6%;
     background-size: rem(698) rem(698);
+    padding-top: rem(120.6);
+    padding-bottom: rem(101);
   }
 }
 
