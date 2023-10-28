@@ -140,43 +140,46 @@ jQuery(function ($) {
 });
 
 // タブ
-$(function () {
-  // タブボタンがクリックされた時の処理
-  $(".js-tab-button").on("click", function () {
-    var index = $(".js-tab-button").index(this);
-    switchTab(index);
+$(document).ready(function () {
+  // タブのクリックイベントを監視
+  $(".js-tab-button").click(function (e) {
+    e.preventDefault();
+    window.location.hash = $(this).attr("id");
   });
 
-  // タブ切り替え処理
-  function switchTab(tabIndex) {
-    $(".js-tab-button").removeClass("current");
-    $(".js-tab-button").eq(tabIndex).addClass("current");
-    $(".js-tab-content.show").removeClass("show");
-    $(".js-tab-content").eq(tabIndex).addClass("show");
-  }
-
-  // URLのハッシュを確認して対応するタブをアクティブにする
-  var hash = window.location.hash;
-  switch (hash) {
-    case "#tab1":
-      switchTab(0);
-      break;
-    case "#tab2":
-      switchTab(1);
-      break;
-    case "#tab3":
-      switchTab(2);
-      break;
-  }
+  // ページ読み込み時とハッシュ変更時にタブの状態を更新
+  activateTabFromHash();
+  $(window).on("hashchange", function () {
+    activateTabFromHash();
+  });
 });
+
+// ハッシュに基づいてタブをアクティブ化する関数
+function activateTabFromHash() {
+  var hash = window.location.hash;
+
+  // タブとコンテンツのアクティブ状態をリセット
+  $(".js-tab-button").removeClass("current");
+  $(".js-tab-content").removeClass("show");
+
+  if (hash) {
+    // ハッシュに該当するタブをアクティブに
+    $(hash).addClass("current");
+
+    // 該当のコンテンツを表示
+    var contentId = "#content" + hash.replace("#tab", "");
+    $(contentId).addClass("show");
+  } else {
+    // ハッシュが存在しない場合、最初のタブをアクティブに
+    $(".js-tab-button:first").addClass("current");
+    $(".js-tab-content:first").addClass("show");
+  }
+}
 
 // アコーディオン
 $(function () {
-  $(".js-accordion-item:first-child .js-accordion-content").css(
-    "display",
-    "block"
-  );
-  $(".js-accordion-item:first-child .js-accordion-title").addClass("is-open"); // 一行目のみ開いているようにする処理
+  $(".js-accordion-item .js-accordion-content").css("display", "block");
+  $(".js-accordion-item .js-accordion-title").addClass("is-open");
   $(".js-accordion-title").on("click", function () {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);

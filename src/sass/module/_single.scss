@@ -1,16 +1,10 @@
 @use "global" as *;
 
-.archive-faq {
+.single {
   position: relative;
 }
 
-.archive-faq__inner.inner {
-  @include mq("md") {
-    max-width: rem(750);
-  }
-}
-
-.archive-faq__inner::before {
+.single__inner::before {
   content: "";
   background-image: url("../images/common/fish2.png");
   background-position: center;
@@ -30,12 +24,5 @@
     width: clamp(rem(120), 50%, rem(300));
     height: clamp(rem(135), 50%, rem(138));
     left: calc(50% - min(48%, 38.7rem));
-  }
-}
-
-.archive-faq__list:not(:first-child) {
-  margin-top: rem(40);
-  @include mq("md") {
-    margin-top: rem(80);
   }
 }

@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.content-2columns {
+  display: block;
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: 1fr 0.42fr;
+    gap: rem(80);
+  }
+}
+
+.content-2columns__sidebar {
+  margin-top: rem(80);
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
+
+.content-2columns__pagenavi {
+  margin-top: rem(80);
+}

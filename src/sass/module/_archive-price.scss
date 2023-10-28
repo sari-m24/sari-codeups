@@ -4,6 +4,12 @@
   position: relative;
 }
 
+.archive-price__inner.inner {
+  @include mq("md") {
+    max-width: rem(750);
+  }
+}
+
 .archive-price__inner::before {
   content: "";
   background-image: url("../images/common/fish2.png");
@@ -24,14 +30,6 @@
     width: clamp(rem(120), 50%, rem(300));
     height: clamp(rem(135), 50%, rem(138));
     left: calc(50% - min(48%, 38.7rem));
-  }
-}
-
-.archive-price__content {
-  @include mq("md") {
-    width: 100%;
-    max-width: rem(700);
-    margin: 0 auto;
   }
 }
 
